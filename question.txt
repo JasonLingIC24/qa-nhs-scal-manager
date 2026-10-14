@@ -1,0 +1,215 @@
+
+> nhs-scal-manager@1.0.0 start
+> tsx src/main.ts
+
+NHS SCAL Manager
+          name="Section.Questions[34].DerivedType"
+                    id="Section_Questions_34__DerivedType"
+                    value="TextSectionQuestionView"
+                  />
+
+                  <div class="answer-history" tabindex="-1"></div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="question-indentation-0">
+              <div
+                class="nhsuk-form-group radio-button-question"
+                data-internal-id="21140"
+                data-is-answered="true"
+              >
+                <input
+                  type="hidden"
+                  data-val="true"
+                  data-val-required="The QuestionId field is required."
+                  id="Section_Questions_35__QuestionId"
+                  name="Section.Questions[35].QuestionId"
+                  value="279285"
+                />
+
+                <strong
+                  class="nhsuk-tag nhsuk-u-margin-bottom-2 nhsuk-u-margin-top-4"
+                  >PDS-FHIR-FLGSEN-3</strong
+                >
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend">
+                    <h4>
+                      On selection, does your product warn the end user that a
+                      patient is sensitive?
+                    </h4>
+                    <p>
+                      If a sensitive record is selected from a ‘pick-list
+                      screen’ or detected during the course of synchronisation,
+                      the local system <strong>must</strong> warn users
+                      accessing the patient’s record that the record is
+                      sensitive, regardless of role-based access controls (RBAC)
+                      rights.
+                    </p>
+                  </legend>
+
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Section.Questions[35].Response"
+                        data-valmsg-replace="true"
+                      ></span>
+                      <input
+                        id="Section_Questions_35__Response.1"
+                        type="radio"
+                        class="nhsuk-radios__input"
+                        value="Yes"
+                        data-id="Response_279285.Yes"
+                        name="Section.Questions[35].Response"
+                      />
+                      <label
+                        for="Section_Questions_35__Response.1"
+                        class="nhsuk-label nhsuk-radios__label"
+                        >Yes</label
+                      >
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Section.Questions[35].Response"
+                        data-valmsg-replace="true"
+                      ></span>
+                      <input
+                        id="Section_Questions_35__Response.2"
+                        type="radio"
+                        class="nhsuk-radios__input"
+                        value="No"
+                        data-id="Response_279285.No"
+                        checked="checked"
+                        name="Section.Questions[35].Response"
+                      />
+                      <label
+                        for="Section_Questions_35__Response.2"
+                        class="nhsuk-label nhsuk-radios__label"
+                        >No</label
+                      >
+                    </div>
+                    <div class="nhsuk-radios__item">
+                      <span
+                        class="field-validation-valid"
+                        data-valmsg-for="Section.Questions[35].Response"
+                        data-valmsg-replace="true"
+                      ></span>
+                      <input
+                        id="Section_Questions_35__Response.3"
+                        type="radio"
+                        class="nhsuk-radios__input"
+                        value="Out of scope"
+                        data-id="Response_279285.Out of scope"
+                        name="Section.Questions[35].Response"
+                      />
+                      <label
+                        for="Section_Questions_35__Response.3"
+                        class="nhsuk-label nhsuk-radios__label"
+                        >Out of scope</label
+                      >
+                    </div>
+                  </div>
+                  <input
+                    type="hidden"
+                    name="Section.Questions[35].DerivedType"
+                    id="Section_Questions_35__DerivedType"
+                    value="SingleChoiceSectionQuestionView"
+                  />
+
+                  <div class="answer-history">
+                    <div>
+                      <div
+                        class="status-inset-text answer-status-3921301 status-inset-text--initialanswer"
+                      >
+                        <div class="answer-history-entry">
+                          <div class="answer-history-content">
+                            <div class="answer-history-info">
+                              Jason Ling at CLEO Systems - Previously Ummanu |
+                              14 Oct 2026 13:22
+                            </div>
+                            <div class="answer-history-status">Answered</div>
+                            <div class="answer-history-changes">
+                              Initial answer 'No'
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="question-indentation-1">
+              <div
+                class="nhsuk-form-group free-text-question"
+                data-internal-id="21141"
+                data-is-answered="true"
+              >
+                <input
+                  type="hidden"
+                  data-val="true"
+                  data-val-required="The QuestionId field is required."
+                  id="Section_Questions_36__QuestionId"
+                  name="Section.Questions[36].QuestionId"
+                  value="280753"
+                />
+
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend">
+                    <label for="Section_Questions_36__Answer"
+                      ><h4>
+                        Provide further details regarding your previous 'No' or
+                        'Out of scope' response.
+                      </h4></label
+                    >
+                  </legend>
+
+                  <span
+                    class="field-validation-valid"
+                    data-valmsg-for="Section.Questions[36].Answer"
+                    data-valmsg-replace="true"
+                  ></span>
+                  <textarea
+                    class="nhsuk-textarea"
+                    rows="5"
+                    id="Section_Questions_36__Answer"
+                    name="Section.Questions[36].Answer"
+                  >
+not as the requirement describes it. 
+Elevate doesn't show any explicit "this patient is sensitive" warning: nothing in the search results, nothing when you select a patient, and no banner on the record. 
+ 
+What it does do is restrict the record quietly: 
+Flag stored: the flag is set from PDS (security code R or V) and saved as is_sensitive on the patient. 
+Address masked: the address lines are blanked and the postcode becomes ZZ99 3WZ. This happens in the backend  and in the frontend. 
+GP Connect hidden: the GP Connect record tab doesn't appear for sensitive patients 
+EPS blocked: EPS prescriptions are disabled, with the tooltip "EPS unavailable for sensitive patients" 
+ </textarea
+                  >
+
+                  <span class="nhsuk-hint" id="280753-character-count"
+                    >You have 1319 characters remaining</span
+                  >
+
+                  <script>
+                    var hintTextElement = document.getElementById(
+                      "280753-character-count",
+                    );
+                    var textAreaElement =
+                      hintTextElement.parentElement.getElementsByTagName(
+                        "textarea",
+                      )[0];
+                    setCharacterCountText();
+                    textAreaElement.addEventListener(
+                      "keyup",
+                      setCharacterCountText,
+                    );
+
+                    function setCharacterCountText() {
+                      var hintTextElement = document.getElementById(
+                        "280753-character-count",
+                      );
+                      var textAreaElement =
+                        hintTextEl

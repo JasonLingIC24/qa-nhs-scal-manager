@@ -1,0 +1,16 @@
+export const FUNCTIONAL_AREAS: Record<string, string> = {
+  FLGSEN: "Sensitive Patients",
+  FLGSUP: "Super Sensitive Patients",
+  NALL: "NHS Number Allocation",
+  PDSPCP: "Healthcare Worker Access",
+  UPDADD: "Address Updates",
+  UPDDTH: "Death Updates",
+  UPDDTS: "Demographic Updates",
+  UPDGPS: "GP Updates",
+  UPDLAN: "Language Updates",
+  UPDPHY: "Physical Characteristics",
+  UPDGEN: "General Updates",
+  UPCON: "Patient Updates",
+  TRCCNF: "Tracing and Confidentiality",
+  TRCDPY: "Tracing and Display",
+};
