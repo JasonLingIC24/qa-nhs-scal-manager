@@ -1,6 +1,25 @@
+# Node
 node_modules/
+
+# Build output
 dist/
 
-data/output/
+# Data
+data/input/*
+!data/input/.gitkeep
 
+# Logs
 *.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak

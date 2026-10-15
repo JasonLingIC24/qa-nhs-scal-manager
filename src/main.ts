@@ -7,6 +7,7 @@ import { ExampleJiraTicketWriter } from "./services/exampleJiraTicketWriter.js";
 
 console.log("NHS SCAL Manager");
 
+const parser = new ScalParser();
 const requirements = parser.parse();
 
 console.log(`SCAL requirements extracted: ${requirements.length}`);
