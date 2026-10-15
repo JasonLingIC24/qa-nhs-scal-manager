@@ -1,7 +1,8 @@
 import * as fs from "fs";
 import * as cheerio from "cheerio";
-
 import { ScalRequirement } from "../models/scalRequirement.js";
+import { FunctionalAreaMapper } from "./functionalAreaMapper.js";
+import { TaskTitleGenerator } from "./taskTitleGenerator.js";
 
 export class ScalParser {
   parse(): ScalRequirement[] {
@@ -11,6 +12,10 @@ export class ScalParser {
 
     const requirements: ScalRequirement[] = [];
 
+    const functionalAreaMapper = new FunctionalAreaMapper();
+
+    const titleGenerator = new TaskTitleGenerator();
+
     $(".radio-button-question").each((_, element) => {
       const container = $(element);
 
@@ -19,6 +24,8 @@ export class ScalParser {
       if (!reference.startsWith("PDS-FHIR")) {
         return;
       }
+
+      const functionalArea = functionalAreaMapper.getFunctionalArea(reference);
 
       const question = container
         .find("h4")
@@ -56,13 +63,17 @@ export class ScalParser {
         }
       });
 
+      const title = titleGenerator.generate(reference, question);
+
       requirements.push({
+        title,
         section: "",
         reference,
         question,
         supportingInformation,
         currentResponse,
         responseOptions: uniqueOptions,
+        functionalArea,
         status: "Not Started",
       });
     });

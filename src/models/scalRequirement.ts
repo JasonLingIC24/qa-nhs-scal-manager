@@ -1,11 +1,14 @@
 export interface ScalRequirement {
   reference: string;
-  question: string;
-  supportingInformation: string;
-  currentResponse?: string;
-  responseOptions: string[];
+  title: string;
 
   section: string;
+
+  question: string;
+  supportingInformation: string;
+
+  currentResponse?: string;
+  responseOptions: string[];
 
   functionalArea?: string;
   jiraStory?: string;

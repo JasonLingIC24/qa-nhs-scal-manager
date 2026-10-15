@@ -1,12 +1,11 @@
+import { ScalParser } from "./services/scalParser.js";
 import { JsonWriter } from "./services/jsonWriter.js";
-const requirements = [
-    {
-        section: "Sensitive Patients",
-        reference: "PDS-FHIR-FLGSEN-3",
-        question: "On selection, does your product warn the end user that a patient is sensitive?",
-        currentResponse: "No",
-        responseOptions: ["Yes", "No", "Partially", "Not Applicable"],
-    },
-];
-const writer = new JsonWriter();
-writer.write(requirements);
+import { SpreadsheetWriter } from "./services/spreadsheetWriter.js";
+console.log("NHS SCAL Manager");
+const parser = new ScalParser();
+const requirements = parser.parse();
+console.log(`Extracted ${requirements.length} requirements`);
+const jsonWriter = new JsonWriter();
+jsonWriter.write(requirements);
+const spreadsheetWriter = new SpreadsheetWriter();
+await spreadsheetWriter.write(requirements);

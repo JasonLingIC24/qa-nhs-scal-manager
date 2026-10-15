@@ -1,16 +1,34 @@
 export const FUNCTIONAL_AREAS: Record<string, string> = {
-  FLGSEN: "Sensitive Patients",
-  FLGSUP: "Super Sensitive Patients",
   NALL: "NHS Number Allocation",
+
   PDSPCP: "Healthcare Worker Access",
-  UPDADD: "Address Updates",
-  UPDDTH: "Death Updates",
-  UPDDTS: "Demographic Updates",
-  UPDGPS: "GP Updates",
-  UPDLAN: "Language Updates",
-  UPDPHY: "Physical Characteristics",
-  UPDGEN: "General Updates",
-  UPCON: "Patient Updates",
-  TRCCNF: "Tracing and Confidentiality",
-  TRCDPY: "Tracing and Display",
+  "PDS-PCP": "Healthcare Worker Access",
+
+  EUOODS: "Healthcare Worker Access & Security",
+  RTLMT: "Healthcare Worker Access & Security",
+
+  TRCDPY: "Patient Search & Results Handling",
+  TRCCNF: "Tracing & Confidentiality",
+
+  FLGSEN: "Sensitive Patients",
+  FLGSUP: "Sensitive Patients",
+  FLGINV: "Sensitive Patients",
+
+  SNCCMP: "PDS Synchronisation",
+  SNCNAM: "PDS Synchronisation",
+  SNCSPL: "PDS Synchronisation",
+  SNCSCN: "PDS Synchronisation",
+  SNCGEN: "PDS Synchronisation",
+
+  UPCON: "Patient Demographics & Updates",
+  UPDADD: "Patient Demographics & Updates",
+  UPDDTH: "Patient Demographics & Updates",
+  UPDDTS: "Patient Demographics & Updates",
+  UPDFLR: "Patient Demographics & Updates",
+  UPDGPS: "Patient Demographics & Updates",
+  UPDLAN: "Patient Demographics & Updates",
+  UPDPHY: "Patient Demographics & Updates",
+  UPDGEN: "Patient Demographics & Updates",
+  UPDSEM: "Patient Demographics & Updates",
+  UPDVLD: "Patient Demographics & Updates",
 };

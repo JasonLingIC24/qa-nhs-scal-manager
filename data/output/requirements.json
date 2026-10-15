@@ -1,5 +1,6 @@
 [
   {
+    "title": "Does your use case require you to allocate NHS Numbers",
     "section": "",
     "reference": "PDS-FHIR-NALL 01",
     "question": "Does your use case require you to allocate NHS Numbers?",
@@ -9,9 +10,11 @@
       "Yes",
       "No"
     ],
+    "functionalArea": "NHS Number Allocation",
     "status": "Not Started"
   },
   {
+    "title": "Before allocating an NHS Number do you ensure that the patient does not have ...",
     "section": "",
     "reference": "PDS-FHIR-NALL 02",
     "question": "Before allocating an NHS Number do you ensure that the patient does not have an NHS Number by performing patient searches on the PDS?",
@@ -21,9 +24,11 @@
       "Yes",
       "No"
     ],
+    "functionalArea": "NHS Number Allocation",
     "status": "Not Started"
   },
   {
+    "title": "allocating a record at birth, do you support all the items in the birth regis...",
     "section": "",
     "reference": "PDS-FHIR-NALL 03",
     "question": "When allocating a record at birth, do you support all the items in the birth registration data set?",
@@ -33,9 +38,11 @@
       "Yes",
       "No"
     ],
+    "functionalArea": "NHS Number Allocation",
     "status": "Not Started"
   },
   {
+    "title": "implemented role-based access controls (RBAC)",
     "section": "",
     "reference": "PDS-FHIR-PDSPCP-4",
     "question": "Have you implemented role-based access controls (RBAC)?",
@@ -46,9 +53,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Healthcare Worker Access",
     "status": "Not Started"
   },
   {
+    "title": "Pass Correct User Profile ID",
     "section": "",
     "reference": "PDS-FHIR-PDS-PCP-8",
     "question": "Does your product pass the correct User Profile ID (URPID) when calling the PDS FHIR API?",
@@ -59,9 +68,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Healthcare Worker Access",
     "status": "Not Started"
   },
   {
+    "title": "have an end-user",
     "section": "",
     "reference": "PDS-FHIR-PDSPCP-7",
     "question": "Does your product have an end-user?",
@@ -71,9 +82,11 @@
       "Yes",
       "No"
     ],
+    "functionalArea": "Healthcare Worker Access",
     "status": "Not Started"
   },
   {
+    "title": "Is your software going to be deployed in multiple end user organisations",
     "section": "",
     "reference": "PDS-FHIR-EUOODS -1",
     "question": "Is your software going to be deployed in multiple end user organisations?",
@@ -83,9 +96,11 @@
       "Yes",
       "No"
     ],
+    "functionalArea": "Healthcare Worker Access & Security",
     "status": "Not Started"
   },
   {
+    "title": "The default rate limit for PDS FHIR is 5 transactions per second (TPS), can y...",
     "section": "",
     "reference": "PDS-FHIR-RTLMT-1",
     "question": "The default rate limit for PDS FHIR is 5 transactions per second (TPS), can you confirm your product will comply with the default rate limit",
@@ -95,9 +110,11 @@
       "Yes",
       "No"
     ],
+    "functionalArea": "Healthcare Worker Access & Security",
     "status": "Not Started"
   },
   {
+    "title": "display the matching level in search results",
     "section": "",
     "reference": "PDS-FHIR-TRCDPY-2",
     "question": "Does your product display the matching level in search results?",
@@ -108,9 +125,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Search & Results Handling",
     "status": "Not Started"
   },
   {
+    "title": "display search results in the order returned from PDS",
     "section": "",
     "reference": "PDS-FHIR-TRCDPY-2.1",
     "question": "Does your product display search results in the order returned from PDS?",
@@ -121,9 +140,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Search & Results Handling",
     "status": "Not Started"
   },
   {
+    "title": "display the sensitive patient flag in search results",
     "section": "",
     "reference": "PDS-FHIR-TRCDPY-4",
     "question": "Does your product display the sensitive patient flag in search results?",
@@ -134,9 +155,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Search & Results Handling",
     "status": "Not Started"
   },
   {
+    "title": "Sensitive Patient Warning",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-3",
     "question": "On selection, does your product warn the end user that a patient is sensitive?",
@@ -147,9 +170,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "include specific information in warning about a sensitive patient",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-3.1",
     "question": "Does your product include specific information in warning about a sensitive patient?",
@@ -160,9 +185,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "synchronise your Local Patient Index",
     "section": "",
     "reference": "PDS-FHIR-PDSPCP-3",
     "question": "Does your product synchronise your Local Patient Index?",
@@ -173,9 +200,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Healthcare Worker Access",
     "status": "Not Started"
   },
   {
+    "title": "continue to provide care if synchronisation fails",
     "section": "",
     "reference": "PDS-FHIR-PDSPCP-3.1",
     "question": "Does your product continue to provide care if synchronisation fails?",
@@ -186,9 +215,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Healthcare Worker Access",
     "status": "Not Started"
   },
   {
+    "title": "warn the end user of key field changes",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-5",
     "question": "Does your product warn the end user of key field changes?",
@@ -199,9 +230,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "allow the end-user to review key field changes",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-5.1",
     "question": "Does your product allow the end-user to review key field changes?",
@@ -212,9 +245,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "accept key field changes if no end-user is present",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-6",
     "question": "Does your product accept key field changes if no end-user is present?",
@@ -225,9 +260,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "tracing for a patient using the NHS Number, does your product warn the user t...",
     "section": "",
     "reference": "PDS-FHIR-FLGSUP-1",
     "question": "When tracing for a patient using the NHS Number, does your product warn the user that the record returned has a different NHS Number to the one that was traced for? (i.e. is superseded)?",
@@ -238,9 +275,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "replace the NHS number for a superseded patient record",
     "section": "",
     "reference": "PDS-FHIR-FLGSUP-2",
     "question": "Does your product replace the NHS number for a superseded patient record?",
@@ -251,9 +290,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "refer superseded record confusion cases to Local Back Office",
     "section": "",
     "reference": "PDS-FHIR-FLGSUP-3",
     "question": "Does your product refer superseded record confusion cases to Local Back Office?",
@@ -264,9 +305,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "Invalidated Record Warning",
     "section": "",
     "reference": "PDS-FHIR-FLGINV-1",
     "question": "Does your product warn the end-user of an invalidated patient record?",
@@ -277,9 +320,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "Invalidated Record Decoupling",
     "section": "",
     "reference": "PDS-FHIR-FLGINV-2",
     "question": "Does your product de-couple an invalidated patient record from PDS?",
@@ -290,9 +335,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "restrict access to location information for a sensitive patient",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-1.1",
     "question": "Does your product restrict access to location information for a sensitive patient?",
@@ -303,9 +350,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "use role-based access controls (RBAC) to restrict access to location informat...",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-1.1.1",
     "question": "Does your product use role-based access controls (RBAC) to restrict access to location information for a sensitive patient?",
@@ -316,9 +365,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "allow authorised users to access and update locally-held location information...",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-1.1.2",
     "question": "Does your product allow authorised users to access and update locally-held location information for a sensitive patient?",
@@ -329,9 +380,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "overwrite locally-held location information for a sensitive patient",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-6",
     "question": "Does your product overwrite locally-held location information for a sensitive patient?",
@@ -342,9 +395,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "Does your service display or update contact details",
     "section": "",
     "reference": "PDS-FHIR-UPCON-1",
     "question": "Does your service display or update contact details?",
@@ -355,9 +410,11 @@
       "No",
       "Out of Scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "reject an entire PDS response message due to invalid data items",
     "section": "",
     "reference": "PDS-FHIR-PDSPCP-6",
     "question": "Does your product reject an entire PDS response message due to invalid data items?",
@@ -368,9 +425,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Healthcare Worker Access",
     "status": "Not Started"
   },
   {
+    "title": "persist and use objects from the PDS with unpopulated optional elements",
     "section": "",
     "reference": "PDS-FHIR-SNCGEN-4",
     "question": "Does your product persist and use objects from the PDS with unpopulated optional elements?",
@@ -381,9 +440,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "Update Matched Local Record",
     "section": "",
     "reference": "PDS-FHIR-SNCCMP-5",
     "question": "Does your product update a matched local record with PDS data?",
@@ -394,9 +455,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "store the Version ID locally",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-1",
     "question": "Does your product store the Version ID locally?",
@@ -407,9 +470,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "enable the end user to confirm the match",
     "section": "",
     "reference": "PDS-FHIR-TRCCNF-1",
     "question": "Does your product enable the end user to confirm the match?",
@@ -420,9 +485,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Tracing & Confidentiality",
     "status": "Not Started"
   },
   {
+    "title": "allow de-coupled records to update PDS",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-7",
     "question": "Does your product allow de-coupled records to update PDS?",
@@ -433,9 +500,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "allow de-coupled records to be updated locally",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-7.1",
     "question": "Does your product allow de-coupled records to be updated locally?",
@@ -446,9 +515,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "enable management of de-coupled records",
     "section": "",
     "reference": "PDS-FHIR-SNCSCN-8",
     "question": "Does your product enable management of de-coupled records?",
@@ -459,9 +530,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "support selecting of data at the object level",
     "section": "",
     "reference": "PDS-FHIR-SNCSPL-4.2",
     "question": "Does your product support selecting of data at the object level?",
@@ -472,9 +545,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "Display Name Prefixes",
     "section": "",
     "reference": "PDS-FHIR-SNCNAM-1",
     "question": "Does your product support the display of all prefixes?",
@@ -485,9 +560,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "PDS Synchronisation",
     "status": "Not Started"
   },
   {
+    "title": "reset locally-held Version ID information for a superseded record",
     "section": "",
     "reference": "PDS-FHIR-FLGSUP-2.2",
     "question": "Does your product reset locally-held Version ID information for a superseded record?",
@@ -498,9 +575,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "notify the Local Back Office if an invalid record is encountered",
     "section": "",
     "reference": "PDS-FHIR-FLGINV-2.1",
     "question": "Does your product notify the Local Back Office if an invalid record is encountered?",
@@ -511,9 +590,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "include the NHS number when notifying the Local Back Office of an invalid record",
     "section": "",
     "reference": "PDS-FHIR-FLGINV-2.1.1",
     "question": "Does your product include the NHS number when notifying the Local Back Office of an invalid record?",
@@ -524,9 +605,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "Sensitive Patient Access Control",
     "section": "",
     "reference": "PDS-FHIR-FLGSEN-4",
     "question": "Does your product support sensitive flag synchronisation?",
@@ -537,9 +620,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
+    "title": "synchronise a locally stored patient before a PDS update",
     "section": "",
     "reference": "PDS-FHIR-UPDGEN-1",
     "question": "Does your product synchronise a locally stored patient before a PDS update?",
@@ -550,9 +635,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "support the management of the Version ID",
     "section": "",
     "reference": "PDS-FHIR-UPDGEN-7",
     "question": "Does your product support the management of the Version ID?",
@@ -563,9 +650,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "alter the use of name, address or telecom details when managing PDS objects",
     "section": "",
     "reference": "PDS-FHIR-UPDSEM-5",
     "question": "Does your product alter the use of name, address or telecom details when managing PDS objects?",
@@ -576,9 +665,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "attempt to add PDS objects that already exist",
     "section": "",
     "reference": "PDS-FHIR-UPDSEM-6",
     "question": "Does your product attempt to add PDS objects that already exist?",
@@ -589,9 +680,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "attempt to replace or remove PDS objects that do not exist",
     "section": "",
     "reference": "PDS-FHIR-UPDSEM-7",
     "question": "Does your product attempt to replace or remove PDS objects that do not exist?",
@@ -602,9 +695,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "Validate Data Before Update",
     "section": "",
     "reference": "PDS-FHIR-UPDVLD-1",
     "question": "Does your product validate data before updating PDS?",
@@ -615,9 +710,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "Validate Date Format Before Update",
     "section": "",
     "reference": "PDS-FHIR-UPDVLD-1.1",
     "question": "Does your product validate dates before updating PDS?",
@@ -628,9 +725,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "Validate Vocabulary Data",
     "section": "",
     "reference": "PDS-FHIR-UPDVLD-1.3",
     "question": "Does your product validate against relevant vocabularies before updating PDS?",
@@ -641,9 +740,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "support 'business effective from' dates where appropriate",
     "section": "",
     "reference": "PDS-FHIR-UPDDTS-1",
     "question": "Does your product support 'business effective from' dates where appropriate?",
@@ -654,9 +755,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "remove objects from PDS where they are to be rendered no longer valid",
     "section": "",
     "reference": "PDS-FHIR-UPDDTS-6",
     "question": "Does your product remove objects from PDS where they are to be rendered no longer valid?",
@@ -667,9 +770,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "avoid adding 'business effective from' dates that are in the future",
     "section": "",
     "reference": "PDS-FHIR-UPDDTS-8",
     "question": "Does your product avoid adding 'business effective from' dates that are in the future?",
@@ -680,9 +785,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "derive addresses from an address lookup tool when updating PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDADD-1",
     "question": "Does your product derive addresses from an address lookup tool when updating PDS?",
@@ -693,9 +800,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "support postcodes that conform to the Royal Mail postcode format",
     "section": "",
     "reference": "PDS-FHIR-UPDADD-5",
     "question": "Does your product support postcodes that conform to the Royal Mail postcode format?",
@@ -706,9 +815,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "support the manual population of addresses",
     "section": "",
     "reference": "PDS-FHIR-UPDADD-6",
     "question": "Does your product support the manual population of addresses?",
@@ -719,9 +830,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "support the default postcode for 'no fixed abode' addresses",
     "section": "",
     "reference": "PDS-FHIR-UPDADD-8.2.3",
     "question": "Does your product support the default postcode for 'no fixed abode' addresses?",
@@ -732,9 +845,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "enable the updating of primary care information on the PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDGPS-1",
     "question": "Does your product enable the updating of primary care information on the PDS?",
@@ -745,9 +860,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "enable the removal of primary care information on the PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDGPS-1.1",
     "question": "Does your product enable the removal of primary care information on the PDS?",
@@ -758,9 +875,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "enable the updating of registered GP practice information on the PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDGPS-1.2",
     "question": "Does your product enable the updating of registered GP practice information on the PDS?",
@@ -771,9 +890,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "enable free-text entry when updating primary care information on the PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDGPS-2",
     "question": "Does your product enable free-text entry when updating primary care information on the PDS?",
@@ -784,9 +905,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "record informal death status for death notifications when updating PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDDTH-1",
     "question": "Does your product record informal death status for death notifications when updating PDS?",
@@ -797,9 +920,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "enable removal of a previously set death status when updating PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDDTH-4",
     "question": "Does your product enable removal of a previously set death status when updating PDS?",
@@ -810,9 +935,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "enable changing death status when updating PDS",
     "section": "",
     "reference": "PDS-FHIR-UPDDTH-5",
     "question": "Does your product enable changing death status when updating PDS?",
@@ -823,9 +950,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "support language definition where the interpreter required indicator is used",
     "section": "",
     "reference": "PDS-FHIR-UPDLAN-1",
     "question": "Does your product support language definition where the interpreter required indicator is used?",
@@ -836,9 +965,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "only support pharmacy codes that are Spine-compliant",
     "section": "",
     "reference": "PDS-FHIR-UPDPHY-1",
     "question": "Does your product only support pharmacy codes that are Spine-compliant?",
@@ -849,9 +980,11 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   },
   {
+    "title": "reset the Version ID when required",
     "section": "",
     "reference": "PDS-FHIR-UPDFLR-2",
     "question": "Does your product reset the Version ID when required?",
@@ -862,6 +995,7 @@
       "No",
       "Out of scope"
     ],
+    "functionalArea": "Patient Demographics & Updates",
     "status": "Not Started"
   }
 ]
