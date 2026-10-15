@@ -1,5 +1,5 @@
 
-> nhs-scal-manager@1.0.0 start
+> qa-nhs-scal-manager@1.0.0 start
 > tsx src/main.ts
 
 NHS SCAL Manager

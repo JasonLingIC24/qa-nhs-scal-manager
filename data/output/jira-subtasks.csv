@@ -1,2083 +1,1834 @@
 Issue Type,Summary,Description,Parent,Labels
-"Sub-task","PDS-FHIR-NALL 01 - Does your use case require you to allocate NHS Numbers","SCAL Requirement
+"Sub-task","[001] - Use Cases","h2. SCAL Requirement
 
-Reference: PDS-FHIR-NALL 01
+||Field||Value||
+|SCAL Reference|PDS-FHIR-001|
+|Title|Use Cases|
+|Functional Area|Uncategorised|
+|Assessment Status|Response Present|
 
-Functional Area
-NHS Number Allocation
+h2. Existing SCAL Status
 
-Question
-Does your use case require you to allocate NHS Numbers?
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Available Responses
-- Yes
-- No
+h2. Question
 
-Response
-[TBD]
+Use Cases
 
-Notes
-[TBD]
+h2. Supporting Information
 
-QA Notes
-[TBD]
+Describe how you are using the API, including:
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-NALL 02 - Before allocating an NHS Number do you ensure that the patient does not have ...","SCAL Requirement
+h2. Available Responses
 
-Reference: PDS-FHIR-NALL 02
 
-Functional Area
-NHS Number Allocation
+h2. Current SCAL Response
 
-Question
-Before allocating an NHS Number do you ensure that the patient does not have an NHS Number by performing patient searches on the PDS?
+{panel:bgColor=#E3FCEF}
+The care settings that we will be looking to utilise the PDS HCW access will be as follows;
+ * 111
+ * UTC
+ * CAS
+ * OOH
+ * PharmacyThe API will be used by registered Heathcare professionals to be able to search and locally register patients in order to be able to provide urgent treatment and provide health care.The endpoints that we use are as follows;
+  GET /Patient
+  GET /Patient/{id}
+  GET /Patient/{id}/RelatedPersonAt this point in time we are not looking to perform any PDS updates and will use the PDS data as the source of truth
+{panel}
 
-Available Responses
-- Yes
-- No
+{panel:bgColor=#E3FCEF}
+The care settings that we will be looking to utilise the PDS HCW access will be as follows;
+ * 111
+ * UTC
+ * CAS
+ * OOH
+ * PharmacyThe API will be used by registered Heathcare professionals to be able to search and locally register patients in order to be able to provide urgent treatment and provide health care.The endpoints that we use are as follows;
+  GET /Patient
+  GET /Patient/{id}
+  GET /Patient/{id}/RelatedPersonAt this point in time we are not looking to perform any PDS updates and will use the PDS data as the source of truth
+{panel}
 
-Response
-[TBD]
+h2. Response
 
-Notes
-[TBD]
+Please provide:
 
-QA Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-NALL 03 - allocating a record at birth, do you support all the items in the birth regis...","SCAL Requirement
+Response:
 
-Reference: PDS-FHIR-NALL 03
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-NHS Number Allocation
+h2. Notes
 
-Question
-When allocating a record at birth, do you support all the items in the birth registration data set?
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
+h2. QA Notes
 
-Response
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Notes
-[TBD]
+h2. Acceptance Criteria
 
-QA Notes
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[EUOODS -1] - Is your software going to be deployed in multiple end user organisations","h2. SCAL Requirement
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-PDSPCP-4 - implemented role-based access controls (RBAC)","SCAL Requirement
+||Field||Value||
+|SCAL Reference|PDS-FHIR-EUOODS -1|
+|Title|Is your software going to be deployed in multiple end user organisations|
+|Functional Area|Healthcare Worker Access & Security|
+|Assessment Status|Response Present|
 
-Reference: PDS-FHIR-PDSPCP-4
+h2. Existing SCAL Status
 
-Functional Area
-Healthcare Worker Access
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Question
-Have you implemented role-based access controls (RBAC)?
+h2. Question
 
-Supporting Information
-You must use the National RBAC model to ensure that only users with appropriate roles are able to access the API.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-PDS-PCP-8 - Pass Correct User Profile ID","SCAL Requirement
-
-Reference: PDS-FHIR-PDS-PCP-8
-
-Functional Area
-Healthcare Worker Access
-
-Question
-Does your product pass the correct User Profile ID (URPID) when calling the PDS FHIR API?
-
-Supporting Information
-This must be the URPID for the role that the user selected for their current session (either at the point of sign in or subsequently).
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-PDSPCP-7 - have an end-user","SCAL Requirement
-
-Reference: PDS-FHIR-PDSPCP-7
-
-Functional Area
-Healthcare Worker Access
-
-Question
-Does your product have an end-user?
-
-Available Responses
-- Yes
-- No
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-EUOODS -1 - Is your software going to be deployed in multiple end user organisations","SCAL Requirement
-
-Reference: PDS-FHIR-EUOODS -1
-
-Functional Area
-Healthcare Worker Access & Security
-
-Question
 Is your software going to be deployed in multiple end user organisations?
 
-Available Responses
-- Yes
-- No
+h2. Available Responses
 
-Current SCAL Response: Yes
+* Yes
+* No
 
-Response
-[TBD]
+h2. Current SCAL Response
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-RTLMT-1 - The default rate limit for PDS FHIR is 5 transactions per second (TPS), can y...","SCAL Requirement
+h2. Response
 
-Reference: PDS-FHIR-RTLMT-1
+Please provide:
 
-Functional Area
-Healthcare Worker Access & Security
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Question
-The default rate limit for PDS FHIR is 5 transactions per second (TPS), can you confirm your product will comply with the default rate limit
+Response:
 
-Available Responses
-- Yes
-- No
+{color:#FF5630}[TBD]{color}
 
-Current SCAL Response: Yes
+h2. Notes
 
-Response
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Notes
-[TBD]
+h2. QA Notes
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-TRCDPY-2 - display the matching level in search results","SCAL Requirement
+h2. Acceptance Criteria
 
-Reference: PDS-FHIR-TRCDPY-2
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGINV-1] - Invalidated Record Warning","h2. SCAL Requirement
 
-Functional Area
-Patient Search & Results Handling
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGINV-1|
+|Title|Invalidated Record Warning|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
 
-Question
-Does your product display the matching level in search results?
+h2. Existing SCAL Status
 
-Supporting Information
-It's important that users select a matching patient based on the patient data, not on the perception of how good the match is.
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Question
 
-Current SCAL Response: No
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-TRCDPY-2.1 - display search results in the order returned from PDS","SCAL Requirement
-
-Reference: PDS-FHIR-TRCDPY-2.1
-
-Functional Area
-Patient Search & Results Handling
-
-Question
-Does your product display search results in the order returned from PDS?
-
-Supporting Information
-That said, it does make sense to display search results in best match first order.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-TRCDPY-4 - display the sensitive patient flag in search results","SCAL Requirement
-
-Reference: PDS-FHIR-TRCDPY-4
-
-Functional Area
-Patient Search & Results Handling
-
-Question
-Does your product display the sensitive patient flag in search results?
-
-Supporting Information
-If a sensitive flagged record is returned in a trace, the flag must not be displayed to the user on a search results screen.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: No
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-3 - Sensitive Patient Warning","SCAL Requirement
-
-Reference: PDS-FHIR-FLGSEN-3
-
-Functional Area
-Sensitive Patients
-
-Question
-On selection, does your product warn the end user that a patient is sensitive?
-
-Supporting Information
-If a sensitive record is selected from a ‘pick-list screen’ or detected during the course of synchronisation, the local system must warn users accessing the patient’s record that the record is sensitive, regardless of role-based access controls (RBAC) rights.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: No
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-3.1 - include specific information in warning about a sensitive patient","SCAL Requirement
-
-Reference: PDS-FHIR-FLGSEN-3.1
-
-Functional Area
-Sensitive Patients
-
-Question
-Does your product include specific information in warning about a sensitive patient?
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-PDSPCP-3 - synchronise your Local Patient Index","SCAL Requirement
-
-Reference: PDS-FHIR-PDSPCP-3
-
-Functional Area
-Healthcare Worker Access
-
-Question
-Does your product synchronise your Local Patient Index?
-
-Supporting Information
-If you retrieve patient data from PDS, you must ensure it is kept up-to-date. This is important for data quality, but especially important to protect sensitive patients. If a patient has been classified as sensitive it's important not to share location details you may have retrieved from PDS before they were sensitive.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-PDSPCP-3.1 - continue to provide care if synchronisation fails","SCAL Requirement
-
-Reference: PDS-FHIR-PDSPCP-3.1
-
-Functional Area
-Healthcare Worker Access
-
-Question
-Does your product continue to provide care if synchronisation fails?
-
-Supporting Information
-Where synchronisation fails at one of the ‘Significant Events’, local systems must continue to be able to provide care for a patient.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-5 - warn the end user of key field changes","SCAL Requirement
-
-Reference: PDS-FHIR-SNCSCN-5
-
-Functional Area
-PDS Synchronisation
-
-Question
-Does your product warn the end user of key field changes?
-
-Supporting Information
-Where there is an interactive user, in addition to the use of the version ID and/or manual comparison of fields, if the local system detects that changes have occurred to the key-fields on the PDS (e.g. the death notification status has been set or the gender altered), that user must be informed.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-5.1 - allow the end-user to review key field changes","SCAL Requirement
-
-Reference: PDS-FHIR-SNCSCN-5.1
-
-Functional Area
-PDS Synchronisation
-
-Question
-Does your product allow the end-user to review key field changes?
-
-Supporting Information
-Interactive users must be given the opportunity to review and if necessary reject a change in the key-fields when syncing with PDS.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: No
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-6 - accept key field changes if no end-user is present","SCAL Requirement
-
-Reference: PDS-FHIR-SNCSCN-6
-
-Functional Area
-PDS Synchronisation
-
-Question
-Does your product accept key field changes if no end-user is present?
-
-Supporting Information
-Where there is no interactive user, or where the logged-on user has read-only access to the system and the records have previously been synchronised, the system must accept updates to key-fields from the PDS.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSUP-1 - tracing for a patient using the NHS Number, does your product warn the user t...","SCAL Requirement
-
-Reference: PDS-FHIR-FLGSUP-1
-
-Functional Area
-Sensitive Patients
-
-Question
-When tracing for a patient using the NHS Number, does your product warn the user that the record returned has a different NHS Number to the one that was traced for? (i.e. is superseded)?
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSUP-2 - replace the NHS number for a superseded patient record","SCAL Requirement
-
-Reference: PDS-FHIR-FLGSUP-2
-
-Functional Area
-Sensitive Patients
-
-Question
-Does your product replace the NHS number for a superseded patient record?
-
-Supporting Information
-On receipt of a Superseded Record code, if the new NHS number returned in the response is not present on another record in the local database, the superseded number must be replaced with the superseding number.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: Yes
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSUP-3 - refer superseded record confusion cases to Local Back Office","SCAL Requirement
-
-Reference: PDS-FHIR-FLGSUP-3
-
-Functional Area
-Sensitive Patients
-
-Question
-Does your product refer superseded record confusion cases to Local Back Office?
-
-Supporting Information
-On receipt of a Superseded Record code, if the new NHS number returned in the response is present on another record in the local database, then the superseded record must continue to be used for the purposes of this episode of care and the Local Back Office must be notified.
-
-Available Responses
-- Yes
-- No
-- Out of scope
-
-Current SCAL Response: No
-
-Response
-[TBD]
-
-Notes
-[TBD]
-
-QA Notes
-[TBD]
-
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGINV-1 - Invalidated Record Warning","SCAL Requirement
-
-Reference: PDS-FHIR-FLGINV-1
-
-Functional Area
-Sensitive Patients
-
-Question
 Does your product warn the end-user of an invalidated patient record?
 
-Supporting Information
+h2. Supporting Information
+
 In a user-interactive process, on receipt of an Invalid NHS number code from the PDS the local system must warn users accessing the patient’s record that the local record is wrongly identified.
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Response
-[TBD]
+* Yes
+* No
+* Out of scope
 
-Notes
-[TBD]
+h2. Current SCAL Response
 
-QA Notes
-[TBD]
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGINV-2 - Invalidated Record Decoupling","SCAL Requirement
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Reference: PDS-FHIR-FLGINV-2
+h2. Response
 
-Functional Area
-Sensitive Patients
+Please provide:
 
-Question
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGINV-1.1] - display the specific required information when warning of an invalidated pati...","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGINV-1.1|
+|Title|display the specific required information when warning of an invalidated pati...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
+
+h2. Question
+
+Does your product display the specific required information when warning of an invalidated patient record?
+
+h2. Available Responses
+
+* That the NHS number being used is no longer valid
+* That the record is being referred to the Local Back Office for processing
+* That all demographic and clinical information for this patient should be regarded with caution until the processing is complete
+* None of the above
+
+h2. Current SCAL Response
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+h2. Response
+
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGINV-1.2] - continue to provide the required warnings to the end-user about an invalidate...","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGINV-1.2|
+|Title|continue to provide the required warnings to the end-user about an invalidate...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
+
+h2. Question
+
+Does your product continue to provide the required warnings to the end-user about an invalidated patient record?
+
+h2. Available Responses
+
+* That there are data anomalies on the record which could constitute a clinical risk
+* That the anomalies may pertain as much to the clinical as the demographic record
+* None of the above
+
+h2. Current SCAL Response
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+h2. Response
+
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGINV-2] - Invalidated Record Decoupling","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGINV-2|
+|Title|Invalidated Record Decoupling|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
+
+h2. Question
+
 Does your product de-couple an invalidated patient record from PDS?
 
-Supporting Information
-On receipt of an Invalid NHS number code, the wrongly identified local record must be de-coupled from the PDS.
+h2. Supporting Information
 
-Available Responses
-- Yes
-- No
-- Out of scope
+On receipt of an Invalid NHS number code, the wrongly identified local record must be de-coupled from the PDS. De-coupling will exempt the local record from further synchronisation until it has been re-coupled and the Version ID reset to 0. It should also trigger a Local Back Office task to resolve.
 
-Response
-[TBD]
+h2. Available Responses
 
-Notes
-[TBD]
+* Yes
+* No
+* Out of scope
 
-QA Notes
-[TBD]
+h2. Current SCAL Response
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-1.1 - restrict access to location information for a sensitive patient","SCAL Requirement
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Reference: PDS-FHIR-FLGSEN-1.1
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Functional Area
-Sensitive Patients
+h2. Response
 
-Question
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-1] - display any of the specified information for a sensitive patient record to us...","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-1|
+|Title|display any of the specified information for a sensitive patient record to us...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
+
+h2. Question
+
+Does your product display any of the specified information for a sensitive patient record to users without appropriate role-based access controls (RBAC) rights?
+
+h2. Available Responses
+
+* Patient addresses
+* Telecoms information
+* Related persons
+* GP Practice/Pharmacy data
+* None of the above
+
+h2. Current SCAL Response
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+h2. Response
+
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-1.1] - restrict access to location information for a sensitive patient","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-1.1|
+|Title|restrict access to location information for a sensitive patient|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
+
+h2. Question
+
 Does your product restrict access to location information for a sensitive patient?
 
-Supporting Information
+h2. Supporting Information
+
 Access to the location details on the record must be restricted using role-based access controls (RBAC).
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Current SCAL Response: Yes
+* Yes
+* No
+* Out of scope
 
-Response
-[TBD]
+h2. Current SCAL Response
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-1.1.1 - use role-based access controls (RBAC) to restrict access to location informat...","SCAL Requirement
+h2. Response
 
-Reference: PDS-FHIR-FLGSEN-1.1.1
+Please provide:
 
-Functional Area
-Sensitive Patients
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Question
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-1.1.1] - use role-based access controls (RBAC) to restrict access to location informat...","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-1.1.1|
+|Title|use role-based access controls (RBAC) to restrict access to location informat...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
+
+h2. Question
+
 Does your product use role-based access controls (RBAC) to restrict access to location information for a sensitive patient?
 
-Supporting Information
+h2. Supporting Information
+
 Access to the location details on the record must be restricted using RBAC.
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Current SCAL Response: Yes
+* Yes
+* No
+* Out of scope
 
-Response
-[TBD]
+h2. Current SCAL Response
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-1.1.2 - allow authorised users to access and update locally-held location information...","SCAL Requirement
+h2. Response
 
-Reference: PDS-FHIR-FLGSEN-1.1.2
+Please provide:
 
-Functional Area
-Sensitive Patients
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Question
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-1.1.2] - allow authorised users to access and update locally-held location information...","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-1.1.2|
+|Title|allow authorised users to access and update locally-held location information...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
+
+h2. Question
+
 Does your product allow authorised users to access and update locally-held location information for a sensitive patient?
 
-Supporting Information
+h2. Supporting Information
+
 Users with appropriate access rights must continue to be able to access and update location information held locally only.
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Current SCAL Response: No
+* Yes
+* No
+* Out of scope
 
-Response
-[TBD]
+h2. Current SCAL Response
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-6 - overwrite locally-held location information for a sensitive patient","SCAL Requirement
+h2. Response
 
-Reference: PDS-FHIR-FLGSEN-6
+Please provide:
 
-Functional Area
-Sensitive Patients
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Question
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-3] - Sensitive Patient Warning","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-3|
+|Title|Sensitive Patient Warning|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
+
+h2. Question
+
+On selection, does your product warn the end user that a patient is sensitive?
+
+h2. Supporting Information
+
+If a sensitive record is selected from a ‘pick-list screen’ or detected during the course of synchronisation, the local system must warn users accessing the patient’s record that the record is sensitive, regardless of role-based access controls (RBAC) rights.
+
+h2. Available Responses
+
+* Yes
+* No
+* Out of scope
+
+h2. Current SCAL Response
+
+{panel:bgColor=#E3FCEF}
+No
+{panel}
+
+{panel:bgColor=#E3FCEF}
+No
+{panel}
+
+h2. Response
+
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-3.1] - include specific information in warning about a sensitive patient","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-3.1|
+|Title|include specific information in warning about a sensitive patient|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
+
+h2. Question
+
+Does your product include specific information in warning about a sensitive patient?
+
+h2. Available Responses
+
+* Yes
+* No
+* Out of scope
+
+h2. Current SCAL Response
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
+
+h2. Response
+
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSEN-6] - overwrite locally-held location information for a sensitive patient","h2. SCAL Requirement
+
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSEN-6|
+|Title|overwrite locally-held location information for a sensitive patient|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Required|
+
+h2. Existing SCAL Status
+
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
+
+h2. Question
+
 Does your product overwrite locally-held location information for a sensitive patient?
 
-Supporting Information
+h2. Supporting Information
+
 Where local, restricted, ‘location’ information is present, this data must not be overwritten with blank data from PDS on record synchronisation.
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Response
-[TBD]
+* Yes
+* No
+* Out of scope
 
-Notes
-[TBD]
+h2. Current SCAL Response
 
-QA Notes
-[TBD]
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPCON-1 - Does your service display or update contact details","SCAL Requirement
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Reference: PDS-FHIR-UPCON-1
+h2. Response
 
-Functional Area
-Patient Demographics & Updates
+Please provide:
 
-Question
-Does your service display or update contact details?
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Available Responses
-- Yes
-- No
-- Out of Scope
+Response:
 
-Response
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Notes
-[TBD]
+h2. Notes
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-PDSPCP-6 - reject an entire PDS response message due to invalid data items","SCAL Requirement
+h2. QA Notes
 
-Reference: PDS-FHIR-PDSPCP-6
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-Healthcare Worker Access
+h2. Acceptance Criteria
 
-Question
-Does your product reject an entire PDS response message due to invalid data items?
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSUP-1] - tracing for a patient using the NHS Number, does your product warn the user t...","h2. SCAL Requirement
 
-Supporting Information
-An entire PDS response message must not be rejected where individual items of data are invalid.
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSUP-1|
+|Title|tracing for a patient using the NHS Number, does your product warn the user t...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Existing SCAL Status
 
-Response
-[TBD]
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Notes
-[TBD]
+h2. Question
 
-QA Notes
-[TBD]
+When tracing for a patient using the NHS Number, does your product warn the user that the record returned has a different NHS Number to the one that was traced for? (i.e. is superseded)?
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCGEN-4 - persist and use objects from the PDS with unpopulated optional elements","SCAL Requirement
+h2. Available Responses
 
-Reference: PDS-FHIR-SNCGEN-4
+* Yes
+* No
+* Out of scope
 
-Functional Area
-PDS Synchronisation
+h2. Current SCAL Response
 
-Question
-Does your product persist and use objects from the PDS with unpopulated optional elements?
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Supporting Information
-Local systems must be able to persist and use objects from the PDS which contain unpopulated optional elements.
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Response
 
-Response
-[TBD]
+Please provide:
 
-Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-QA Notes
-[TBD]
+Response:
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCCMP-5 - Update Matched Local Record","SCAL Requirement
+{color:#FF5630}[TBD]{color}
 
-Reference: PDS-FHIR-SNCCMP-5
+h2. Notes
 
-Functional Area
-PDS Synchronisation
+{color:#FF5630}[TBD]{color}
 
-Question
-Does your product update a matched local record with PDS data?
+h2. QA Notes
 
-Supporting Information
-The local system must be capable of updating any matched local record with PDS data.
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Acceptance Criteria
 
-Response
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSUP-1.1] - display the specific required information when warning of a superseded patien...","h2. SCAL Requirement
 
-Notes
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSUP-1.1|
+|Title|display the specific required information when warning of a superseded patien...|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
 
-QA Notes
-[TBD]
+h2. Existing SCAL Status
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-1 - store the Version ID locally","SCAL Requirement
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Reference: PDS-FHIR-SNCSCN-1
+h2. Question
 
-Functional Area
-PDS Synchronisation
+Does your product display the specific required information when warning of a superseded patient record?
 
-Question
-Does your product store the Version ID locally?
+h2. Available Responses
 
-Supporting Information
-Local systems must store the Version ID locally in order determine synchronisation behaviour.
+* That the NHS number being used has been replaced
+* That the patient should be informed of the replacement number (where possible)
+* None of the above
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Current SCAL Response
 
-Response
-[TBD]
+{panel:bgColor=#E3FCEF}
+That the NHS number being used has been replaced, That the patient should be informed of the replacement number (where possible)
+{panel}
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+That the NHS number being used has been replaced, That the patient should be informed of the replacement number (where possible)
+{panel}
 
-QA Notes
-[TBD]
+h2. Response
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-TRCCNF-1 - enable the end user to confirm the match","SCAL Requirement
+Please provide:
 
-Reference: PDS-FHIR-TRCCNF-1
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Functional Area
-Tracing & Confidentiality
+Response:
 
-Question
-Does your product enable the end user to confirm the match?
+{color:#FF5630}[TBD]{color}
 
-Supporting Information
-Where a matching record returned by the LPI or PDS in response to a trace is selected, a user must be prompted to confirm that the displayed record belongs to the patient.
+h2. Notes
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{color:#FF5630}[TBD]{color}
 
-Response
-[TBD]
+h2. QA Notes
 
-Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-QA Notes
-[TBD]
+h2. Acceptance Criteria
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-7 - allow de-coupled records to update PDS","SCAL Requirement
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSUP-2] - replace the NHS number for a superseded patient record","h2. SCAL Requirement
 
-Reference: PDS-FHIR-SNCSCN-7
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSUP-2|
+|Title|replace the NHS number for a superseded patient record|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
 
-Functional Area
-PDS Synchronisation
+h2. Existing SCAL Status
 
-Question
-Does your product allow de-coupled records to update PDS?
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Supporting Information
-De-coupled records must not be used to update the PDS.
+h2. Question
 
-Available Responses
-- Yes
-- No
-- Out of scope
+Does your product replace the NHS number for a superseded patient record?
 
-Response
-[TBD]
+h2. Supporting Information
 
-Notes
-[TBD]
+On receipt of a Superseded Record code, if the new NHS number returned in the response is not present on another record in the local database, the superseded number must be replaced with the superseding number.
 
-QA Notes
-[TBD]
+h2. Available Responses
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-7.1 - allow de-coupled records to be updated locally","SCAL Requirement
+* Yes
+* No
+* Out of scope
 
-Reference: PDS-FHIR-SNCSCN-7.1
+h2. Current SCAL Response
 
-Functional Area
-PDS Synchronisation
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Question
-Does your product allow de-coupled records to be updated locally?
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Supporting Information
-De-coupled records must be capable of being updated locally.
+h2. Response
 
-Available Responses
-- Yes
-- No
-- Out of scope
+Please provide:
 
-Response
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Notes
-[TBD]
+Response:
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSCN-8 - enable management of de-coupled records","SCAL Requirement
+h2. Notes
 
-Reference: PDS-FHIR-SNCSCN-8
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-PDS Synchronisation
+h2. QA Notes
 
-Question
-Does your product enable management of de-coupled records?
+{color:#FF5630}[TBD]{color}
 
-Supporting Information
-Local systems must provide tools to manage de-coupled records.
+h2. Acceptance Criteria
 
-Available Responses
-- Yes
-- No
-- Out of scope
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[FLGSUP-3] - refer superseded record confusion cases to Local Back Office","h2. SCAL Requirement
 
-Response
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-FLGSUP-3|
+|Title|refer superseded record confusion cases to Local Back Office|
+|Functional Area|Sensitive Patients|
+|Assessment Status|Response Present|
 
-Notes
-[TBD]
+h2. Existing SCAL Status
 
-QA Notes
-[TBD]
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCSPL-4.2 - support selecting of data at the object level","SCAL Requirement
+h2. Question
 
-Reference: PDS-FHIR-SNCSPL-4.2
+Does your product refer superseded record confusion cases to Local Back Office?
 
-Functional Area
-PDS Synchronisation
+h2. Supporting Information
 
-Question
-Does your product support selecting of data at the object level?
+On receipt of a Superseded Record code, if the new NHS number returned in the response is present on another record in the local database, then the superseded record must continue to be used for the purposes of this episode of care and the Local Back Office must be notified.
 
-Supporting Information
-Selection of data from each source must be at the object level e.g. the whole 'home' address, not individual address lines.
+h2. Available Responses
 
-Available Responses
-- Yes
-- No
-- Out of scope
+* Yes
+* No
+* Out of scope
 
-Response
-[TBD]
+h2. Current SCAL Response
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-SNCNAM-1 - Display Name Prefixes","SCAL Requirement
+h2. Response
 
-Reference: PDS-FHIR-SNCNAM-1
+Please provide:
 
-Functional Area
-PDS Synchronisation
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Question
-Does your product support the display of all prefixes?
+Response:
 
-Supporting Information
-Local systems must be able to display any name prefix value returned by the PDS.
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Notes
 
-Response
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Notes
-[TBD]
+h2. QA Notes
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSUP-2.2 - reset locally-held Version ID information for a superseded record","SCAL Requirement
+h2. Acceptance Criteria
 
-Reference: PDS-FHIR-FLGSUP-2.2
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[PDS-PCP-8] - Pass Correct User Profile ID","h2. SCAL Requirement
 
-Functional Area
-Sensitive Patients
+||Field||Value||
+|SCAL Reference|PDS-FHIR-PDS-PCP-8|
+|Title|Pass Correct User Profile ID|
+|Functional Area|Healthcare Worker Access|
+|Assessment Status|Response Required|
 
-Question
-Does your product reset locally-held Version ID information for a superseded record?
+h2. Existing SCAL Status
 
-Supporting Information
-The system must reset any locally-held Version ID information for the superseded record.
+||Field||Value||
+|Answered|No|
+|Current Response|Not Supplied|
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Question
 
-Response
-[TBD]
+Does your product pass the correct User Profile ID (URPID) when calling the PDS FHIR API?
 
-Notes
-[TBD]
+h2. Supporting Information
 
-QA Notes
-[TBD]
+This must be the URPID for the role that the user selected for their current session (either at the point of sign in or subsequently).
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGINV-2.1 - notify the Local Back Office if an invalid record is encountered","SCAL Requirement
+h2. Available Responses
 
-Reference: PDS-FHIR-FLGINV-2.1
+* Yes
+* No
+* Out of scope
 
-Functional Area
-Sensitive Patients
+h2. Current SCAL Response
 
-Question
-Does your product notify the Local Back Office if an invalid record is encountered?
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Supporting Information
-Local systems must notify the Local Back Office that an invalid record has been encountered.
+{panel:bgColor=#FFEBE6}
+No response supplied
+{panel}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Response
 
-Response
-[TBD]
+Please provide:
 
-Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-QA Notes
-[TBD]
+Response:
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGINV-2.1.1 - include the NHS number when notifying the Local Back Office of an invalid record","SCAL Requirement
+{color:#FF5630}[TBD]{color}
 
-Reference: PDS-FHIR-FLGINV-2.1.1
+h2. Notes
 
-Functional Area
-Sensitive Patients
+{color:#FF5630}[TBD]{color}
 
-Question
-Does your product include the NHS number when notifying the Local Back Office of an invalid record?
+h2. QA Notes
 
-Supporting Information
-The notification must contain the affected record NHS number.
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Acceptance Criteria
 
-Response
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[PDSPCP-3] - synchronise your Local Patient Index","h2. SCAL Requirement
 
-Notes
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-PDSPCP-3|
+|Title|synchronise your Local Patient Index|
+|Functional Area|Healthcare Worker Access|
+|Assessment Status|Response Present|
 
-QA Notes
-[TBD]
+h2. Existing SCAL Status
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-FLGSEN-4 - Sensitive Patient Access Control","SCAL Requirement
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Reference: PDS-FHIR-FLGSEN-4
+h2. Question
 
-Functional Area
-Sensitive Patients
+Does your product synchronise your Local Patient Index?
 
-Question
-Does your product support sensitive flag synchronisation?
+h2. Supporting Information
 
-Supporting Information
-Local Systems should continue to attempt record synchronisation with the PDS at subsequent significant events, so that it can be detected whether a sensitive flag has been removed from the record.
+If you retrieve patient data from PDS, you must ensure it is kept up-to-date. This is important for data quality, but especially important to protect sensitive patients. If a patient has been classified as sensitive it's important not to share location details you may have retrieved from PDS before they were sensitive.
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Response
-[TBD]
+* Yes
+* No
+* Out of scope
 
-Notes
-[TBD]
+h2. Current SCAL Response
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDGEN-1 - synchronise a locally stored patient before a PDS update","SCAL Requirement
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Reference: PDS-FHIR-UPDGEN-1
+h2. Response
 
-Functional Area
-Patient Demographics & Updates
+Please provide:
 
-Question
-Does your product synchronise a locally stored patient before a PDS update?
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Supporting Information
-Systems must synchronise a locally stored patient record prior to performing a PDS General Update.
+Response:
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{color:#FF5630}[TBD]{color}
 
-Response
-[TBD]
+h2. Notes
 
-Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-QA Notes
-[TBD]
+h2. QA Notes
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDGEN-7 - support the management of the Version ID","SCAL Requirement
+{color:#FF5630}[TBD]{color}
 
-Reference: PDS-FHIR-UPDGEN-7
+h2. Acceptance Criteria
 
-Functional Area
-Patient Demographics & Updates
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[PDSPCP-3.1] - continue to provide care if synchronisation fails","h2. SCAL Requirement
 
-Question
-Does your product support the management of the Version ID?
+||Field||Value||
+|SCAL Reference|PDS-FHIR-PDSPCP-3.1|
+|Title|continue to provide care if synchronisation fails|
+|Functional Area|Healthcare Worker Access|
+|Assessment Status|Response Present|
 
-Supporting Information
-The Version ID must be reset to 0 upon sending the PDS Update.
+h2. Existing SCAL Status
 
-Available Responses
-- Yes
-- No
-- Out of scope
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Response
-[TBD]
+h2. Question
 
-Notes
-[TBD]
+Does your product continue to provide care if synchronisation fails?
 
-QA Notes
-[TBD]
+h2. Supporting Information
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDSEM-5 - alter the use of name, address or telecom details when managing PDS objects","SCAL Requirement
+Where synchronisation fails at one of the ‘Significant Events’, local systems must continue to be able to provide care for a patient.
 
-Reference: PDS-FHIR-UPDSEM-5
+h2. Available Responses
 
-Functional Area
-Patient Demographics & Updates
+* Yes
+* No
+* Out of scope
 
-Question
-Does your product alter the use of name, address or telecom details when managing PDS objects?
+h2. Current SCAL Response
 
-Supporting Information
-When altering name, address or telecom objects, local systems must not change the 'system' or 'use' e.g. a 'mobile' must not be changed to 'home'. The prior object must be removed, and a new one added instead.
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Response
-[TBD]
+h2. Response
 
-Notes
-[TBD]
+Please provide:
 
-QA Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDSEM-6 - attempt to add PDS objects that already exist","SCAL Requirement
+Response:
 
-Reference: PDS-FHIR-UPDSEM-6
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-Patient Demographics & Updates
+h2. Notes
 
-Question
-Does your product attempt to add PDS objects that already exist?
+{color:#FF5630}[TBD]{color}
 
-Supporting Information
-Local systems must not attempt to ‘add’ objects which already exist.
+h2. QA Notes
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{color:#FF5630}[TBD]{color}
 
-Response
-[TBD]
+h2. Acceptance Criteria
 
-Notes
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[PDSPCP-4] - implemented role-based access controls (RBAC)","h2. SCAL Requirement
 
-QA Notes
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-PDSPCP-4|
+|Title|implemented role-based access controls (RBAC)|
+|Functional Area|Healthcare Worker Access|
+|Assessment Status|Response Present|
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDSEM-7 - attempt to replace or remove PDS objects that do not exist","SCAL Requirement
+h2. Existing SCAL Status
 
-Reference: PDS-FHIR-UPDSEM-7
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Functional Area
-Patient Demographics & Updates
+h2. Question
 
-Question
-Does your product attempt to replace or remove PDS objects that do not exist?
+Have you implemented role-based access controls (RBAC)?
 
-Supporting Information
-Local systems must not attempt to ‘replace’ or ‘remove’ objects which do not exist.
+h2. Supporting Information
 
-Available Responses
-- Yes
-- No
-- Out of scope
+You must use the National RBAC model to ensure that only users with appropriate roles are able to access the API.
 
-Response
-[TBD]
+h2. Available Responses
 
-Notes
-[TBD]
+* Yes
+* No
+* Out of scope
 
-QA Notes
-[TBD]
+h2. Current SCAL Response
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDVLD-1 - Validate Data Before Update","SCAL Requirement
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Reference: PDS-FHIR-UPDVLD-1
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Functional Area
-Patient Demographics & Updates
+h2. Response
 
-Question
-Does your product validate data before updating PDS?
+Please provide:
 
-Supporting Information
-Local systems must validate data prior to updating PDS.
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Available Responses
-- Yes
-- No
-- Out of scope
+Response:
 
-Response
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Notes
-[TBD]
+h2. Notes
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDVLD-1.1 - Validate Date Format Before Update","SCAL Requirement
+h2. QA Notes
 
-Reference: PDS-FHIR-UPDVLD-1.1
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-Patient Demographics & Updates
+h2. Acceptance Criteria
 
-Question
-Does your product validate dates before updating PDS?
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[PDSPCP-7] - have an end-user","h2. SCAL Requirement
 
-Supporting Information
-When dates are added or updated on the PDS, they must be sent as valid, full dates in the required format.
+||Field||Value||
+|SCAL Reference|PDS-FHIR-PDSPCP-7|
+|Title|have an end-user|
+|Functional Area|Healthcare Worker Access|
+|Assessment Status|Response Present|
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Existing SCAL Status
 
-Response
-[TBD]
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Notes
-[TBD]
+h2. Question
 
-QA Notes
-[TBD]
+Does your product have an end-user?
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDVLD-1.3 - Validate Vocabulary Data","SCAL Requirement
+h2. Available Responses
 
-Reference: PDS-FHIR-UPDVLD-1.3
+* Yes
+* No
 
-Functional Area
-Patient Demographics & Updates
+h2. Current SCAL Response
 
-Question
-Does your product validate against relevant vocabularies before updating PDS?
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Supporting Information
-Any vocabulary data contained in an update must be validated against the appropriate vocabulary in the specifications.
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Response
 
-Response
-[TBD]
+Please provide:
 
-Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-QA Notes
-[TBD]
+Response:
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDDTS-1 - support 'business effective from' dates where appropriate","SCAL Requirement
+{color:#FF5630}[TBD]{color}
 
-Reference: PDS-FHIR-UPDDTS-1
+h2. Notes
 
-Functional Area
-Patient Demographics & Updates
+{color:#FF5630}[TBD]{color}
 
-Question
-Does your product support 'business effective from' dates where appropriate?
+h2. QA Notes
 
-Supporting Information
-A ‘business effective from’ date must be provided where an object supports business effective dates.
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Acceptance Criteria
 
-Response
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[RTLMT-1] - The default rate limit for PDS FHIR is 5 transactions per second (TPS), can y...","h2. SCAL Requirement
 
-Notes
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-RTLMT-1|
+|Title|The default rate limit for PDS FHIR is 5 transactions per second (TPS), can y...|
+|Functional Area|Healthcare Worker Access & Security|
+|Assessment Status|Response Present|
 
-QA Notes
-[TBD]
+h2. Existing SCAL Status
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDDTS-6 - remove objects from PDS where they are to be rendered no longer valid","SCAL Requirement
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Reference: PDS-FHIR-UPDDTS-6
+h2. Question
 
-Functional Area
-Patient Demographics & Updates
+The default rate limit for PDS FHIR is 5 transactions per second (TPS), can you confirm your product will comply with the default rate limit
 
-Question
-Does your product remove objects from PDS where they are to be rendered no longer valid?
+h2. Available Responses
 
-Supporting Information
-With the exception of the type 'home' address (Usual address), where an object is to be rendered no longer valid from the current moment (e.g. it is end-dated on the local system with an end date that is not in the future), and no replacement value is being provided, then it must be removed from PDS.
+* Yes
+* No
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Current SCAL Response
 
-Response
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-QA Notes
-[TBD]
+h2. Response
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDDTS-8 - avoid adding 'business effective from' dates that are in the future","SCAL Requirement
+Please provide:
 
-Reference: PDS-FHIR-UPDDTS-8
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Functional Area
-Patient Demographics & Updates
+Response:
 
-Question
-Does your product avoid adding 'business effective from' dates that are in the future?
+{color:#FF5630}[TBD]{color}
 
-Supporting Information
-When updating PDS, ‘business effective from’ dates must not be set in the future.
+h2. Notes
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{color:#FF5630}[TBD]{color}
 
-Response
-[TBD]
+h2. QA Notes
 
-Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-QA Notes
-[TBD]
+h2. Acceptance Criteria
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDADD-1 - derive addresses from an address lookup tool when updating PDS","SCAL Requirement
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[SNCSCN-5] - warn the end user of key field changes","h2. SCAL Requirement
 
-Reference: PDS-FHIR-UPDADD-1
+||Field||Value||
+|SCAL Reference|PDS-FHIR-SNCSCN-5|
+|Title|warn the end user of key field changes|
+|Functional Area|PDS Synchronisation|
+|Assessment Status|Response Present|
 
-Functional Area
-Patient Demographics & Updates
+h2. Existing SCAL Status
 
-Question
-Does your product derive addresses from an address lookup tool when updating PDS?
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Supporting Information
-Local systems must be capable of deriving addresses from an address lookup tool when performing updates. We prefer you to use a tool that uses Ordnance Survey AddressBase, such as the OS Places API. We also accept tools that use Royal Mail Postcode Address File (PAF).
+h2. Question
 
-Available Responses
-- Yes
-- No
-- Out of scope
+Does your product warn the end user of key field changes?
 
-Response
-[TBD]
+h2. Supporting Information
 
-Notes
-[TBD]
+Where there is an interactive user, in addition to the use of the version ID and/or manual comparison of fields, if the local system detects that changes have occurred to the key-fields on the PDS (e.g. the death notification status has been set or the gender altered), that user must be informed.
 
-QA Notes
-[TBD]
+h2. Available Responses
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDADD-5 - support postcodes that conform to the Royal Mail postcode format","SCAL Requirement
+* Yes
+* No
+* Out of scope
 
-Reference: PDS-FHIR-UPDADD-5
+h2. Current SCAL Response
 
-Functional Area
-Patient Demographics & Updates
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Question
-Does your product support postcodes that conform to the Royal Mail postcode format?
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Supporting Information
-The postcode must conform to the Royal Mail postcode format e.g. a single space character must separate the ‘outcode’ and ‘incode’.
+h2. Response
 
-Available Responses
-- Yes
-- No
-- Out of scope
+Please provide:
 
-Response
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Notes
-[TBD]
+Response:
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDADD-6 - support the manual population of addresses","SCAL Requirement
+h2. Notes
 
-Reference: PDS-FHIR-UPDADD-6
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-Patient Demographics & Updates
+h2. QA Notes
 
-Question
-Does your product support the manual population of addresses?
+{color:#FF5630}[TBD]{color}
 
-Supporting Information
-Where an address cannot be found in the address lookup tool or an address lookup tool is not supported, systems must enable the user to manually populate the address according to the prescribed format.
+h2. Acceptance Criteria
 
-Available Responses
-- Yes
-- No
-- Out of scope
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[SNCSCN-5.1] - allow the end-user to review key field changes","h2. SCAL Requirement
 
-Response
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-SNCSCN-5.1|
+|Title|allow the end-user to review key field changes|
+|Functional Area|PDS Synchronisation|
+|Assessment Status|Response Present|
 
-Notes
-[TBD]
+h2. Existing SCAL Status
 
-QA Notes
-[TBD]
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDADD-8.2.3 - support the default postcode for 'no fixed abode' addresses","SCAL Requirement
+h2. Question
 
-Reference: PDS-FHIR-UPDADD-8.2.3
+Does your product allow the end-user to review key field changes?
 
-Functional Area
-Patient Demographics & Updates
+h2. Supporting Information
 
-Question
-Does your product support the default postcode for 'no fixed abode' addresses?
+Interactive users must be given the opportunity to review and if necessary reject a change in the key-fields when syncing with PDS.
 
-Supporting Information
-For ‘no fixed abode’ addresses, the postcode field must contain the default postcode ‘ZZ99 3VZ’.
+h2. Available Responses
 
-Available Responses
-- Yes
-- No
-- Out of scope
+* Yes
+* No
+* Out of scope
 
-Response
-[TBD]
+h2. Current SCAL Response
 
-Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDGPS-1 - enable the updating of primary care information on the PDS","SCAL Requirement
+h2. Response
 
-Reference: PDS-FHIR-UPDGPS-1
+Please provide:
 
-Functional Area
-Patient Demographics & Updates
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Question
-Does your product enable the updating of primary care information on the PDS?
+Response:
 
-Supporting Information
-Systems other than NHAIS, GP Practice and DSA must not update primary care information on the PDS.
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Notes
 
-Response
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Notes
-[TBD]
+h2. QA Notes
 
-QA Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDGPS-1.1 - enable the removal of primary care information on the PDS","SCAL Requirement
+h2. Acceptance Criteria
 
-Reference: PDS-FHIR-UPDGPS-1.1
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[SNCSCN-6] - accept key field changes if no end-user is present","h2. SCAL Requirement
 
-Functional Area
-Patient Demographics & Updates
+||Field||Value||
+|SCAL Reference|PDS-FHIR-SNCSCN-6|
+|Title|accept key field changes if no end-user is present|
+|Functional Area|PDS Synchronisation|
+|Assessment Status|Response Present|
 
-Question
-Does your product enable the removal of primary care information on the PDS?
+h2. Existing SCAL Status
 
-Supporting Information
-Systems other than NHAIS or DSA must not ‘remove’ primary care information from the PDS.
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Question
 
-Response
-[TBD]
+Does your product accept key field changes if no end-user is present?
 
-Notes
-[TBD]
+h2. Supporting Information
 
-QA Notes
-[TBD]
+Where there is no interactive user, or where the logged-on user has read-only access to the system and the records have previously been synchronised, the system must accept updates to key-fields from the PDS.
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDGPS-1.2 - enable the updating of registered GP practice information on the PDS","SCAL Requirement
+h2. Available Responses
 
-Reference: PDS-FHIR-UPDGPS-1.2
+* Yes
+* No
+* Out of scope
 
-Functional Area
-Patient Demographics & Updates
+h2. Current SCAL Response
 
-Question
-Does your product enable the updating of registered GP practice information on the PDS?
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Supporting Information
-Primary care systems must only update registered GP practice information as part of GP registration functionality. This information must not be changed on the PDS for any other purpose.
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Response
 
-Response
-[TBD]
+Please provide:
 
-Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-QA Notes
-[TBD]
+Response:
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDGPS-2 - enable free-text entry when updating primary care information on the PDS","SCAL Requirement
+{color:#FF5630}[TBD]{color}
 
-Reference: PDS-FHIR-UPDGPS-2
+h2. Notes
 
-Functional Area
-Patient Demographics & Updates
+{color:#FF5630}[TBD]{color}
 
-Question
-Does your product enable free-text entry when updating primary care information on the PDS?
+h2. QA Notes
 
-Supporting Information
-Where primary care data is added to the update request, the user interface must not allow free-text entry of coded data, but provide lookup functionality.
+{color:#FF5630}[TBD]{color}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Acceptance Criteria
 
-Response
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[TRCDPY-2] - display the matching level in search results","h2. SCAL Requirement
 
-Notes
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-TRCDPY-2|
+|Title|display the matching level in search results|
+|Functional Area|Patient Search & Results Handling|
+|Assessment Status|Response Present|
 
-QA Notes
-[TBD]
+h2. Existing SCAL Status
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDDTH-1 - record informal death status for death notifications when updating PDS","SCAL Requirement
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Reference: PDS-FHIR-UPDDTH-1
+h2. Question
 
-Functional Area
-Patient Demographics & Updates
+Does your product display the matching level in search results?
 
-Question
-Does your product record informal death status for death notifications when updating PDS?
+h2. Supporting Information
 
-Supporting Information
-Where there is a legitimate business need to submit death notifications, local systems must be capable of recording (e.g. setting) informal death status on the PDS.
+It's important that users select a matching patient based on the patient data, not on the perception of how good the match is. Therefore, you must not display the Matching Level with the search results.
 
-Available Responses
-- Yes
-- No
-- Out of scope
+h2. Available Responses
 
-Response
-[TBD]
+* Yes
+* No
+* Out of scope
 
-Notes
-[TBD]
+h2. Current SCAL Response
 
-QA Notes
-[TBD]
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDDTH-4 - enable removal of a previously set death status when updating PDS","SCAL Requirement
+{panel:bgColor=#E3FCEF}
+No
+{panel}
 
-Reference: PDS-FHIR-UPDDTH-4
+h2. Response
 
-Functional Area
-Patient Demographics & Updates
+Please provide:
 
-Question
-Does your product enable removal of a previously set death status when updating PDS?
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Supporting Information
-Local systems must not attempt to un-decease the patient on the PDS, by ‘removing’ a death status once set.
+Response:
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{color:#FF5630}[TBD]{color}
 
-Response
-[TBD]
+h2. Notes
 
-Notes
-[TBD]
+{color:#FF5630}[TBD]{color}
 
-QA Notes
-[TBD]
+h2. QA Notes
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDDTH-5 - enable changing death status when updating PDS","SCAL Requirement
+{color:#FF5630}[TBD]{color}
 
-Reference: PDS-FHIR-UPDDTH-5
+h2. Acceptance Criteria
 
-Functional Area
-Patient Demographics & Updates
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[TRCDPY-2.1] - display search results in the order returned from PDS","h2. SCAL Requirement
 
-Question
-Does your product enable changing death status when updating PDS?
+||Field||Value||
+|SCAL Reference|PDS-FHIR-TRCDPY-2.1|
+|Title|display search results in the order returned from PDS|
+|Functional Area|Patient Search & Results Handling|
+|Assessment Status|Response Present|
 
-Supporting Information
-Local systems must not update the death status recorded on PDS from a ‘2’ (formal) to a ‘1’ (informal).
+h2. Existing SCAL Status
 
-Available Responses
-- Yes
-- No
-- Out of scope
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Response
-[TBD]
+h2. Question
 
-Notes
-[TBD]
+Does your product display search results in the order returned from PDS?
 
-QA Notes
-[TBD]
+h2. Supporting Information
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDLAN-1 - support language definition where the interpreter required indicator is used","SCAL Requirement
+That said, it does make sense to display search results in best match first order. Therefore, local systems must display search results in the order returned from PDS.
 
-Reference: PDS-FHIR-UPDLAN-1
+h2. Available Responses
 
-Functional Area
-Patient Demographics & Updates
+* Yes
+* No
+* Out of scope
 
-Question
-Does your product support language definition where the interpreter required indicator is used?
+h2. Current SCAL Response
 
-Supporting Information
-If the interpreter required indicator is to be updated on PDS then a language defined in the language vocabulary must also be included in the update.
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{panel:bgColor=#E3FCEF}
+Yes
+{panel}
 
-Response
-[TBD]
+h2. Response
 
-Notes
-[TBD]
+Please provide:
 
-QA Notes
-[TBD]
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDPHY-1 - only support pharmacy codes that are Spine-compliant","SCAL Requirement
+Response:
 
-Reference: PDS-FHIR-UPDPHY-1
+{color:#FF5630}[TBD]{color}
 
-Functional Area
-Patient Demographics & Updates
+h2. Notes
 
-Question
-Does your product only support pharmacy codes that are Spine-compliant?
+{color:#FF5630}[TBD]{color}
 
-Supporting Information
-Local systems must only update the PDS with codes that are for Spine-compliant pharmacies.
+h2. QA Notes
 
-Available Responses
-- Yes
-- No
-- Out of scope
+{color:#FF5630}[TBD]{color}
 
-Response
-[TBD]
+h2. Acceptance Criteria
 
-Notes
-[TBD]
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"
+"Sub-task","[TRCDPY-4] - display the sensitive patient flag in search results","h2. SCAL Requirement
 
-QA Notes
-[TBD]
+||Field||Value||
+|SCAL Reference|PDS-FHIR-TRCDPY-4|
+|Title|display the sensitive patient flag in search results|
+|Functional Area|Patient Search & Results Handling|
+|Assessment Status|Response Present|
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
-"Sub-task","PDS-FHIR-UPDFLR-2 - reset the Version ID when required","SCAL Requirement
+h2. Existing SCAL Status
 
-Reference: PDS-FHIR-UPDFLR-2
+||Field||Value||
+|Answered|Yes|
+|Current Response|Present|
 
-Functional Area
-Patient Demographics & Updates
+h2. Question
 
-Question
-Does your product reset the Version ID when required?
+Does your product display the sensitive patient flag in search results?
 
-Supporting Information
-If an update fails as a result of a Version ID failure, the Version ID must be reset to force a manual synchronisation at the next significant event.
+h2. Supporting Information
 
-Available Responses
-- Yes
-- No
-- Out of scope
+If a sensitive flagged record is returned in a trace, the flag must not be displayed to the user on a search results screen.
 
-Response
-[TBD]
+h2. Available Responses
 
-Notes
-[TBD]
+* Yes
+* No
+* Out of scope
 
-QA Notes
-[TBD]
+h2. Current SCAL Response
 
-Acceptance Criteria
-- Requirement reviewed
-- Response completed
-- Returned to QA","EVA-2583","SCAL,PDS"
+{panel:bgColor=#E3FCEF}
+No
+{panel}
+
+{panel:bgColor=#E3FCEF}
+No
+{panel}
+
+h2. Response
+
+Please provide:
+
+* Proposed SCAL response
+* Explanation of current behaviour
+* Any assumptions or limitations
+
+Response:
+
+{color:#FF5630}[TBD]{color}
+
+h2. Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. QA Notes
+
+{color:#FF5630}[TBD]{color}
+
+h2. Acceptance Criteria
+
+* Requirement reviewed
+* Developer response provided
+* Returned to QA
+* Ready for SCAL submission review","EVA-2583","SCAL,PDS"

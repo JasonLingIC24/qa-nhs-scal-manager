@@ -18,6 +18,11 @@ export class SpreadsheetWriter {
                 width: 25,
             },
             {
+                header: "Title",
+                key: "title",
+                width: 40,
+            },
+            {
                 header: "Question",
                 key: "question",
                 width: 80,
@@ -72,6 +77,7 @@ export class SpreadsheetWriter {
             worksheet.addRow({
                 functionalArea: requirement.functionalArea ?? "",
                 reference: requirement.reference,
+                title: requirement.title,
                 question: requirement.question,
                 supportingInformation: requirement.supportingInformation,
                 currentResponse: requirement.currentResponse ?? "",

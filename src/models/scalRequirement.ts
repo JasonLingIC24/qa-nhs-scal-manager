@@ -2,6 +2,10 @@ export interface ScalRequirement {
   reference: string;
   title: string;
 
+  derivedType: string;
+  isAnswered: boolean;
+  isHidden: boolean;
+
   section: string;
 
   question: string;

@@ -1,94 +1,25 @@
 [
   {
-    "title": "Does your use case require you to allocate NHS Numbers",
+    "reference": "PDS-FHIR-001",
+    "title": "Use Cases",
+    "derivedType": "TextSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-NALL 01",
-    "question": "Does your use case require you to allocate NHS Numbers?",
-    "supportingInformation": "",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No"
-    ],
-    "functionalArea": "NHS Number Allocation",
+    "question": "Use Cases",
+    "supportingInformation": "Describe how you are using the API, including:",
+    "currentResponse": "The care settings that we will be looking to utilise the PDS HCW access will be as follows;\n * 111\n * UTC\n * CAS\n * OOH\n * PharmacyThe API will be used by registered Heathcare professionals to be able to search and locally register patients in order to be able to provide urgent treatment and provide health care.The endpoints that we use are as follows;\n  GET /Patient\n  GET /Patient/{id}\n  GET /Patient/{id}/RelatedPersonAt this point in time we are not looking to perform any PDS updates and will use the PDS data as the source of truth",
+    "responseOptions": [],
+    "functionalArea": "Uncategorised",
     "status": "Not Started"
   },
   {
-    "title": "Before allocating an NHS Number do you ensure that the patient does not have ...",
-    "section": "",
-    "reference": "PDS-FHIR-NALL 02",
-    "question": "Before allocating an NHS Number do you ensure that the patient does not have an NHS Number by performing patient searches on the PDS?",
-    "supportingInformation": "",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No"
-    ],
-    "functionalArea": "NHS Number Allocation",
-    "status": "Not Started"
-  },
-  {
-    "title": "allocating a record at birth, do you support all the items in the birth regis...",
-    "section": "",
-    "reference": "PDS-FHIR-NALL 03",
-    "question": "When allocating a record at birth, do you support all the items in the birth registration data set?",
-    "supportingInformation": "",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No"
-    ],
-    "functionalArea": "NHS Number Allocation",
-    "status": "Not Started"
-  },
-  {
-    "title": "implemented role-based access controls (RBAC)",
-    "section": "",
-    "reference": "PDS-FHIR-PDSPCP-4",
-    "question": "Have you implemented role-based access controls (RBAC)?",
-    "supportingInformation": "You must use the National RBAC model to ensure that only users with appropriate roles are able to access the API.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Healthcare Worker Access",
-    "status": "Not Started"
-  },
-  {
-    "title": "Pass Correct User Profile ID",
-    "section": "",
-    "reference": "PDS-FHIR-PDS-PCP-8",
-    "question": "Does your product pass the correct User Profile ID (URPID) when calling the PDS FHIR API?",
-    "supportingInformation": "This must be the URPID for the role that the user selected for their current session (either at the point of sign in or subsequently).",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Healthcare Worker Access",
-    "status": "Not Started"
-  },
-  {
-    "title": "have an end-user",
-    "section": "",
-    "reference": "PDS-FHIR-PDSPCP-7",
-    "question": "Does your product have an end-user?",
-    "supportingInformation": "",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No"
-    ],
-    "functionalArea": "Healthcare Worker Access",
-    "status": "Not Started"
-  },
-  {
-    "title": "Is your software going to be deployed in multiple end user organisations",
-    "section": "",
     "reference": "PDS-FHIR-EUOODS -1",
+    "title": "Is your software going to be deployed in multiple end user organisations",
+    "derivedType": "YesNoSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
     "question": "Is your software going to be deployed in multiple end user organisations?",
     "supportingInformation": "",
     "currentResponse": "Yes",
@@ -100,218 +31,12 @@
     "status": "Not Started"
   },
   {
-    "title": "The default rate limit for PDS FHIR is 5 transactions per second (TPS), can y...",
-    "section": "",
-    "reference": "PDS-FHIR-RTLMT-1",
-    "question": "The default rate limit for PDS FHIR is 5 transactions per second (TPS), can you confirm your product will comply with the default rate limit",
-    "supportingInformation": "",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No"
-    ],
-    "functionalArea": "Healthcare Worker Access & Security",
-    "status": "Not Started"
-  },
-  {
-    "title": "display the matching level in search results",
-    "section": "",
-    "reference": "PDS-FHIR-TRCDPY-2",
-    "question": "Does your product display the matching level in search results?",
-    "supportingInformation": "It's important that users select a matching patient based on the patient data, not on the perception of how good the match is.",
-    "currentResponse": "No",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Search & Results Handling",
-    "status": "Not Started"
-  },
-  {
-    "title": "display search results in the order returned from PDS",
-    "section": "",
-    "reference": "PDS-FHIR-TRCDPY-2.1",
-    "question": "Does your product display search results in the order returned from PDS?",
-    "supportingInformation": "That said, it does make sense to display search results in best match first order.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Search & Results Handling",
-    "status": "Not Started"
-  },
-  {
-    "title": "display the sensitive patient flag in search results",
-    "section": "",
-    "reference": "PDS-FHIR-TRCDPY-4",
-    "question": "Does your product display the sensitive patient flag in search results?",
-    "supportingInformation": "If a sensitive flagged record is returned in a trace, the flag must not be displayed to the user on a search results screen.",
-    "currentResponse": "No",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Search & Results Handling",
-    "status": "Not Started"
-  },
-  {
-    "title": "Sensitive Patient Warning",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSEN-3",
-    "question": "On selection, does your product warn the end user that a patient is sensitive?",
-    "supportingInformation": "If a sensitive record is selected from a ‘pick-list screen’ or detected during the course of synchronisation, the local system must warn users accessing the patient’s record that the record is sensitive, regardless of role-based access controls (RBAC) rights.",
-    "currentResponse": "No",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "include specific information in warning about a sensitive patient",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSEN-3.1",
-    "question": "Does your product include specific information in warning about a sensitive patient?",
-    "supportingInformation": "",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "synchronise your Local Patient Index",
-    "section": "",
-    "reference": "PDS-FHIR-PDSPCP-3",
-    "question": "Does your product synchronise your Local Patient Index?",
-    "supportingInformation": "If you retrieve patient data from PDS, you must ensure it is kept up-to-date. This is important for data quality, but especially important to protect sensitive patients. If a patient has been classified as sensitive it's important not to share location details you may have retrieved from PDS before they were sensitive.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Healthcare Worker Access",
-    "status": "Not Started"
-  },
-  {
-    "title": "continue to provide care if synchronisation fails",
-    "section": "",
-    "reference": "PDS-FHIR-PDSPCP-3.1",
-    "question": "Does your product continue to provide care if synchronisation fails?",
-    "supportingInformation": "Where synchronisation fails at one of the ‘Significant Events’, local systems must continue to be able to provide care for a patient.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Healthcare Worker Access",
-    "status": "Not Started"
-  },
-  {
-    "title": "warn the end user of key field changes",
-    "section": "",
-    "reference": "PDS-FHIR-SNCSCN-5",
-    "question": "Does your product warn the end user of key field changes?",
-    "supportingInformation": "Where there is an interactive user, in addition to the use of the version ID and/or manual comparison of fields, if the local system detects that changes have occurred to the key-fields on the PDS (e.g. the death notification status has been set or the gender altered), that user must be informed.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "allow the end-user to review key field changes",
-    "section": "",
-    "reference": "PDS-FHIR-SNCSCN-5.1",
-    "question": "Does your product allow the end-user to review key field changes?",
-    "supportingInformation": "Interactive users must be given the opportunity to review and if necessary reject a change in the key-fields when syncing with PDS.",
-    "currentResponse": "No",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "accept key field changes if no end-user is present",
-    "section": "",
-    "reference": "PDS-FHIR-SNCSCN-6",
-    "question": "Does your product accept key field changes if no end-user is present?",
-    "supportingInformation": "Where there is no interactive user, or where the logged-on user has read-only access to the system and the records have previously been synchronised, the system must accept updates to key-fields from the PDS.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "tracing for a patient using the NHS Number, does your product warn the user t...",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSUP-1",
-    "question": "When tracing for a patient using the NHS Number, does your product warn the user that the record returned has a different NHS Number to the one that was traced for? (i.e. is superseded)?",
-    "supportingInformation": "",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "replace the NHS number for a superseded patient record",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSUP-2",
-    "question": "Does your product replace the NHS number for a superseded patient record?",
-    "supportingInformation": "On receipt of a Superseded Record code, if the new NHS number returned in the response is not present on another record in the local database, the superseded number must be replaced with the superseding number.",
-    "currentResponse": "Yes",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "refer superseded record confusion cases to Local Back Office",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSUP-3",
-    "question": "Does your product refer superseded record confusion cases to Local Back Office?",
-    "supportingInformation": "On receipt of a Superseded Record code, if the new NHS number returned in the response is present on another record in the local database, then the superseded record must continue to be used for the purposes of this episode of care and the Local Back Office must be notified.",
-    "currentResponse": "No",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "Invalidated Record Warning",
-    "section": "",
     "reference": "PDS-FHIR-FLGINV-1",
+    "title": "Invalidated Record Warning",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
+    "section": "",
     "question": "Does your product warn the end-user of an invalidated patient record?",
     "supportingInformation": "In a user-interactive process, on receipt of an Invalid NHS number code from the PDS the local system must warn users accessing the patient’s record that the local record is wrongly identified.",
     "currentResponse": "",
@@ -324,11 +49,51 @@
     "status": "Not Started"
   },
   {
-    "title": "Invalidated Record Decoupling",
+    "reference": "PDS-FHIR-FLGINV-1.1",
+    "title": "display the specific required information when warning of an invalidated pati...",
+    "derivedType": "MultipleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
     "section": "",
+    "question": "Does your product display the specific required information when warning of an invalidated patient record?",
+    "supportingInformation": "",
+    "currentResponse": "",
+    "responseOptions": [
+      "That the NHS number being used is no longer valid",
+      "That the record is being referred to the Local Back Office for processing",
+      "That all demographic and clinical information for this patient should be regarded with caution until the processing is complete",
+      "None of the above"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-FLGINV-1.2",
+    "title": "continue to provide the required warnings to the end-user about an invalidate...",
+    "derivedType": "MultipleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product continue to provide the required warnings to the end-user about an invalidated patient record?",
+    "supportingInformation": "",
+    "currentResponse": "",
+    "responseOptions": [
+      "That there are data anomalies on the record which could constitute a clinical risk",
+      "That the anomalies may pertain as much to the clinical as the demographic record",
+      "None of the above"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
     "reference": "PDS-FHIR-FLGINV-2",
+    "title": "Invalidated Record Decoupling",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
+    "section": "",
     "question": "Does your product de-couple an invalidated patient record from PDS?",
-    "supportingInformation": "On receipt of an Invalid NHS number code, the wrongly identified local record must be de-coupled from the PDS.",
+    "supportingInformation": "On receipt of an Invalid NHS number code, the wrongly identified local record must be de-coupled from the PDS. De-coupling will exempt the local record from further synchronisation until it has been re-coupled and the Version ID reset to 0. It should also trigger a Local Back Office task to resolve.",
     "currentResponse": "",
     "responseOptions": [
       "Yes",
@@ -339,9 +104,32 @@
     "status": "Not Started"
   },
   {
-    "title": "restrict access to location information for a sensitive patient",
+    "reference": "PDS-FHIR-FLGSEN-1",
+    "title": "display any of the specified information for a sensitive patient record to us...",
+    "derivedType": "MultipleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
     "section": "",
+    "question": "Does your product display any of the specified information for a sensitive patient record to users without appropriate role-based access controls (RBAC) rights?",
+    "supportingInformation": "",
+    "currentResponse": "",
+    "responseOptions": [
+      "Patient addresses",
+      "Telecoms information",
+      "Related persons",
+      "GP Practice/Pharmacy data",
+      "None of the above"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
     "reference": "PDS-FHIR-FLGSEN-1.1",
+    "title": "restrict access to location information for a sensitive patient",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
     "question": "Does your product restrict access to location information for a sensitive patient?",
     "supportingInformation": "Access to the location details on the record must be restricted using role-based access controls (RBAC).",
     "currentResponse": "Yes",
@@ -354,9 +142,12 @@
     "status": "Not Started"
   },
   {
-    "title": "use role-based access controls (RBAC) to restrict access to location informat...",
-    "section": "",
     "reference": "PDS-FHIR-FLGSEN-1.1.1",
+    "title": "use role-based access controls (RBAC) to restrict access to location informat...",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
     "question": "Does your product use role-based access controls (RBAC) to restrict access to location information for a sensitive patient?",
     "supportingInformation": "Access to the location details on the record must be restricted using RBAC.",
     "currentResponse": "Yes",
@@ -369,9 +160,12 @@
     "status": "Not Started"
   },
   {
-    "title": "allow authorised users to access and update locally-held location information...",
-    "section": "",
     "reference": "PDS-FHIR-FLGSEN-1.1.2",
+    "title": "allow authorised users to access and update locally-held location information...",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
     "question": "Does your product allow authorised users to access and update locally-held location information for a sensitive patient?",
     "supportingInformation": "Users with appropriate access rights must continue to be able to access and update location information held locally only.",
     "currentResponse": "No",
@@ -384,9 +178,48 @@
     "status": "Not Started"
   },
   {
-    "title": "overwrite locally-held location information for a sensitive patient",
+    "reference": "PDS-FHIR-FLGSEN-3",
+    "title": "Sensitive Patient Warning",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
+    "question": "On selection, does your product warn the end user that a patient is sensitive?",
+    "supportingInformation": "If a sensitive record is selected from a ‘pick-list screen’ or detected during the course of synchronisation, the local system must warn users accessing the patient’s record that the record is sensitive, regardless of role-based access controls (RBAC) rights.",
+    "currentResponse": "No",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-FLGSEN-3.1",
+    "title": "include specific information in warning about a sensitive patient",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product include specific information in warning about a sensitive patient?",
+    "supportingInformation": "",
+    "currentResponse": "",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
     "reference": "PDS-FHIR-FLGSEN-6",
+    "title": "overwrite locally-held location information for a sensitive patient",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
+    "section": "",
     "question": "Does your product overwrite locally-held location information for a sensitive patient?",
     "supportingInformation": "Where local, restricted, ‘location’ information is present, this data must not be overwritten with blank data from PDS on record synchronisation.",
     "currentResponse": "",
@@ -399,26 +232,86 @@
     "status": "Not Started"
   },
   {
-    "title": "Does your service display or update contact details",
+    "reference": "PDS-FHIR-FLGSUP-1",
+    "title": "tracing for a patient using the NHS Number, does your product warn the user t...",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-UPCON-1",
-    "question": "Does your service display or update contact details?",
+    "question": "When tracing for a patient using the NHS Number, does your product warn the user that the record returned has a different NHS Number to the one that was traced for? (i.e. is superseded)?",
     "supportingInformation": "",
-    "currentResponse": "",
+    "currentResponse": "Yes",
     "responseOptions": [
       "Yes",
       "No",
-      "Out of Scope"
+      "Out of scope"
     ],
-    "functionalArea": "Patient Demographics & Updates",
+    "functionalArea": "Sensitive Patients",
     "status": "Not Started"
   },
   {
-    "title": "reject an entire PDS response message due to invalid data items",
+    "reference": "PDS-FHIR-FLGSUP-1.1",
+    "title": "display the specific required information when warning of a superseded patien...",
+    "derivedType": "MultipleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-PDSPCP-6",
-    "question": "Does your product reject an entire PDS response message due to invalid data items?",
-    "supportingInformation": "An entire PDS response message must not be rejected where individual items of data are invalid.",
+    "question": "Does your product display the specific required information when warning of a superseded patient record?",
+    "supportingInformation": "",
+    "currentResponse": "That the NHS number being used has been replaced, That the patient should be informed of the replacement number (where possible)",
+    "responseOptions": [
+      "That the NHS number being used has been replaced",
+      "That the patient should be informed of the replacement number (where possible)",
+      "None of the above"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-FLGSUP-2",
+    "title": "replace the NHS number for a superseded patient record",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product replace the NHS number for a superseded patient record?",
+    "supportingInformation": "On receipt of a Superseded Record code, if the new NHS number returned in the response is not present on another record in the local database, the superseded number must be replaced with the superseding number.",
+    "currentResponse": "Yes",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-FLGSUP-3",
+    "title": "refer superseded record confusion cases to Local Back Office",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product refer superseded record confusion cases to Local Back Office?",
+    "supportingInformation": "On receipt of a Superseded Record code, if the new NHS number returned in the response is present on another record in the local database, then the superseded record must continue to be used for the purposes of this episode of care and the Local Back Office must be notified.",
+    "currentResponse": "No",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Sensitive Patients",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-PDS-PCP-8",
+    "title": "Pass Correct User Profile ID",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": false,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product pass the correct User Profile ID (URPID) when calling the PDS FHIR API?",
+    "supportingInformation": "This must be the URPID for the role that the user selected for their current session (either at the point of sign in or subsequently).",
     "currentResponse": "",
     "responseOptions": [
       "Yes",
@@ -429,12 +322,103 @@
     "status": "Not Started"
   },
   {
-    "title": "persist and use objects from the PDS with unpopulated optional elements",
+    "reference": "PDS-FHIR-PDSPCP-3",
+    "title": "synchronise your Local Patient Index",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-SNCGEN-4",
-    "question": "Does your product persist and use objects from the PDS with unpopulated optional elements?",
-    "supportingInformation": "Local systems must be able to persist and use objects from the PDS which contain unpopulated optional elements.",
-    "currentResponse": "",
+    "question": "Does your product synchronise your Local Patient Index?",
+    "supportingInformation": "If you retrieve patient data from PDS, you must ensure it is kept up-to-date. This is important for data quality, but especially important to protect sensitive patients. If a patient has been classified as sensitive it's important not to share location details you may have retrieved from PDS before they were sensitive.",
+    "currentResponse": "Yes",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Healthcare Worker Access",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-PDSPCP-3.1",
+    "title": "continue to provide care if synchronisation fails",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product continue to provide care if synchronisation fails?",
+    "supportingInformation": "Where synchronisation fails at one of the ‘Significant Events’, local systems must continue to be able to provide care for a patient.",
+    "currentResponse": "Yes",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Healthcare Worker Access",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-PDSPCP-4",
+    "title": "implemented role-based access controls (RBAC)",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "Have you implemented role-based access controls (RBAC)?",
+    "supportingInformation": "You must use the National RBAC model to ensure that only users with appropriate roles are able to access the API.",
+    "currentResponse": "Yes",
+    "responseOptions": [
+      "Yes",
+      "No",
+      "Out of scope"
+    ],
+    "functionalArea": "Healthcare Worker Access",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-PDSPCP-7",
+    "title": "have an end-user",
+    "derivedType": "YesNoSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product have an end-user?",
+    "supportingInformation": "",
+    "currentResponse": "Yes",
+    "responseOptions": [
+      "Yes",
+      "No"
+    ],
+    "functionalArea": "Healthcare Worker Access",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-RTLMT-1",
+    "title": "The default rate limit for PDS FHIR is 5 transactions per second (TPS), can y...",
+    "derivedType": "YesNoSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "The default rate limit for PDS FHIR is 5 transactions per second (TPS), can you confirm your product will comply with the default rate limit",
+    "supportingInformation": "",
+    "currentResponse": "Yes",
+    "responseOptions": [
+      "Yes",
+      "No"
+    ],
+    "functionalArea": "Healthcare Worker Access & Security",
+    "status": "Not Started"
+  },
+  {
+    "reference": "PDS-FHIR-SNCSCN-5",
+    "title": "warn the end user of key field changes",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
+    "section": "",
+    "question": "Does your product warn the end user of key field changes?",
+    "supportingInformation": "Where there is an interactive user, in addition to the use of the version ID and/or manual comparison of fields, if the local system detects that changes have occurred to the key-fields on the PDS (e.g. the death notification status has been set or the gender altered), that user must be informed.",
+    "currentResponse": "Yes",
     "responseOptions": [
       "Yes",
       "No",
@@ -444,12 +428,15 @@
     "status": "Not Started"
   },
   {
-    "title": "Update Matched Local Record",
+    "reference": "PDS-FHIR-SNCSCN-5.1",
+    "title": "allow the end-user to review key field changes",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-SNCCMP-5",
-    "question": "Does your product update a matched local record with PDS data?",
-    "supportingInformation": "The local system must be capable of updating any matched local record with PDS data.",
-    "currentResponse": "",
+    "question": "Does your product allow the end-user to review key field changes?",
+    "supportingInformation": "Interactive users must be given the opportunity to review and if necessary reject a change in the key-fields when syncing with PDS.",
+    "currentResponse": "No",
     "responseOptions": [
       "Yes",
       "No",
@@ -459,12 +446,15 @@
     "status": "Not Started"
   },
   {
-    "title": "store the Version ID locally",
+    "reference": "PDS-FHIR-SNCSCN-6",
+    "title": "accept key field changes if no end-user is present",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-SNCSCN-1",
-    "question": "Does your product store the Version ID locally?",
-    "supportingInformation": "Local systems must store the Version ID locally in order determine synchronisation behaviour.",
-    "currentResponse": "",
+    "question": "Does your product accept key field changes if no end-user is present?",
+    "supportingInformation": "Where there is no interactive user, or where the logged-on user has read-only access to the system and the records have previously been synchronised, the system must accept updates to key-fields from the PDS.",
+    "currentResponse": "Yes",
     "responseOptions": [
       "Yes",
       "No",
@@ -474,528 +464,57 @@
     "status": "Not Started"
   },
   {
-    "title": "enable the end user to confirm the match",
+    "reference": "PDS-FHIR-TRCDPY-2",
+    "title": "display the matching level in search results",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-TRCCNF-1",
-    "question": "Does your product enable the end user to confirm the match?",
-    "supportingInformation": "Where a matching record returned by the LPI or PDS in response to a trace is selected, a user must be prompted to confirm that the displayed record belongs to the patient.",
-    "currentResponse": "",
+    "question": "Does your product display the matching level in search results?",
+    "supportingInformation": "It's important that users select a matching patient based on the patient data, not on the perception of how good the match is. Therefore, you must not display the Matching Level with the search results.",
+    "currentResponse": "No",
     "responseOptions": [
       "Yes",
       "No",
       "Out of scope"
     ],
-    "functionalArea": "Tracing & Confidentiality",
+    "functionalArea": "Patient Search & Results Handling",
     "status": "Not Started"
   },
   {
-    "title": "allow de-coupled records to update PDS",
+    "reference": "PDS-FHIR-TRCDPY-2.1",
+    "title": "display search results in the order returned from PDS",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-SNCSCN-7",
-    "question": "Does your product allow de-coupled records to update PDS?",
-    "supportingInformation": "De-coupled records must not be used to update the PDS.",
-    "currentResponse": "",
+    "question": "Does your product display search results in the order returned from PDS?",
+    "supportingInformation": "That said, it does make sense to display search results in best match first order. Therefore, local systems must display search results in the order returned from PDS.",
+    "currentResponse": "Yes",
     "responseOptions": [
       "Yes",
       "No",
       "Out of scope"
     ],
-    "functionalArea": "PDS Synchronisation",
+    "functionalArea": "Patient Search & Results Handling",
     "status": "Not Started"
   },
   {
-    "title": "allow de-coupled records to be updated locally",
+    "reference": "PDS-FHIR-TRCDPY-4",
+    "title": "display the sensitive patient flag in search results",
+    "derivedType": "SingleChoiceSectionQuestionView",
+    "isAnswered": true,
+    "isHidden": false,
     "section": "",
-    "reference": "PDS-FHIR-SNCSCN-7.1",
-    "question": "Does your product allow de-coupled records to be updated locally?",
-    "supportingInformation": "De-coupled records must be capable of being updated locally.",
-    "currentResponse": "",
+    "question": "Does your product display the sensitive patient flag in search results?",
+    "supportingInformation": "If a sensitive flagged record is returned in a trace, the flag must not be displayed to the user on a search results screen.",
+    "currentResponse": "No",
     "responseOptions": [
       "Yes",
       "No",
       "Out of scope"
     ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable management of de-coupled records",
-    "section": "",
-    "reference": "PDS-FHIR-SNCSCN-8",
-    "question": "Does your product enable management of de-coupled records?",
-    "supportingInformation": "Local systems must provide tools to manage de-coupled records.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "support selecting of data at the object level",
-    "section": "",
-    "reference": "PDS-FHIR-SNCSPL-4.2",
-    "question": "Does your product support selecting of data at the object level?",
-    "supportingInformation": "Selection of data from each source must be at the object level e.g. the whole 'home' address, not individual address lines.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "Display Name Prefixes",
-    "section": "",
-    "reference": "PDS-FHIR-SNCNAM-1",
-    "question": "Does your product support the display of all prefixes?",
-    "supportingInformation": "Local systems must be able to display any name prefix value returned by the PDS.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "PDS Synchronisation",
-    "status": "Not Started"
-  },
-  {
-    "title": "reset locally-held Version ID information for a superseded record",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSUP-2.2",
-    "question": "Does your product reset locally-held Version ID information for a superseded record?",
-    "supportingInformation": "The system must reset any locally-held Version ID information for the superseded record.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "notify the Local Back Office if an invalid record is encountered",
-    "section": "",
-    "reference": "PDS-FHIR-FLGINV-2.1",
-    "question": "Does your product notify the Local Back Office if an invalid record is encountered?",
-    "supportingInformation": "Local systems must notify the Local Back Office that an invalid record has been encountered.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "include the NHS number when notifying the Local Back Office of an invalid record",
-    "section": "",
-    "reference": "PDS-FHIR-FLGINV-2.1.1",
-    "question": "Does your product include the NHS number when notifying the Local Back Office of an invalid record?",
-    "supportingInformation": "The notification must contain the affected record NHS number.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "Sensitive Patient Access Control",
-    "section": "",
-    "reference": "PDS-FHIR-FLGSEN-4",
-    "question": "Does your product support sensitive flag synchronisation?",
-    "supportingInformation": "Local Systems should continue to attempt record synchronisation with the PDS at subsequent significant events, so that it can be detected whether a sensitive flag has been removed from the record.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Sensitive Patients",
-    "status": "Not Started"
-  },
-  {
-    "title": "synchronise a locally stored patient before a PDS update",
-    "section": "",
-    "reference": "PDS-FHIR-UPDGEN-1",
-    "question": "Does your product synchronise a locally stored patient before a PDS update?",
-    "supportingInformation": "Systems must synchronise a locally stored patient record prior to performing a PDS General Update.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "support the management of the Version ID",
-    "section": "",
-    "reference": "PDS-FHIR-UPDGEN-7",
-    "question": "Does your product support the management of the Version ID?",
-    "supportingInformation": "The Version ID must be reset to 0 upon sending the PDS Update.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "alter the use of name, address or telecom details when managing PDS objects",
-    "section": "",
-    "reference": "PDS-FHIR-UPDSEM-5",
-    "question": "Does your product alter the use of name, address or telecom details when managing PDS objects?",
-    "supportingInformation": "When altering name, address or telecom objects, local systems must not change the 'system' or 'use' e.g. a 'mobile' must not be changed to 'home'. The prior object must be removed, and a new one added instead.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "attempt to add PDS objects that already exist",
-    "section": "",
-    "reference": "PDS-FHIR-UPDSEM-6",
-    "question": "Does your product attempt to add PDS objects that already exist?",
-    "supportingInformation": "Local systems must not attempt to ‘add’ objects which already exist.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "attempt to replace or remove PDS objects that do not exist",
-    "section": "",
-    "reference": "PDS-FHIR-UPDSEM-7",
-    "question": "Does your product attempt to replace or remove PDS objects that do not exist?",
-    "supportingInformation": "Local systems must not attempt to ‘replace’ or ‘remove’ objects which do not exist.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "Validate Data Before Update",
-    "section": "",
-    "reference": "PDS-FHIR-UPDVLD-1",
-    "question": "Does your product validate data before updating PDS?",
-    "supportingInformation": "Local systems must validate data prior to updating PDS.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "Validate Date Format Before Update",
-    "section": "",
-    "reference": "PDS-FHIR-UPDVLD-1.1",
-    "question": "Does your product validate dates before updating PDS?",
-    "supportingInformation": "When dates are added or updated on the PDS, they must be sent as valid, full dates in the required format.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "Validate Vocabulary Data",
-    "section": "",
-    "reference": "PDS-FHIR-UPDVLD-1.3",
-    "question": "Does your product validate against relevant vocabularies before updating PDS?",
-    "supportingInformation": "Any vocabulary data contained in an update must be validated against the appropriate vocabulary in the specifications.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "support 'business effective from' dates where appropriate",
-    "section": "",
-    "reference": "PDS-FHIR-UPDDTS-1",
-    "question": "Does your product support 'business effective from' dates where appropriate?",
-    "supportingInformation": "A ‘business effective from’ date must be provided where an object supports business effective dates.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "remove objects from PDS where they are to be rendered no longer valid",
-    "section": "",
-    "reference": "PDS-FHIR-UPDDTS-6",
-    "question": "Does your product remove objects from PDS where they are to be rendered no longer valid?",
-    "supportingInformation": "With the exception of the type 'home' address (Usual address), where an object is to be rendered no longer valid from the current moment (e.g. it is end-dated on the local system with an end date that is not in the future), and no replacement value is being provided, then it must be removed from PDS.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "avoid adding 'business effective from' dates that are in the future",
-    "section": "",
-    "reference": "PDS-FHIR-UPDDTS-8",
-    "question": "Does your product avoid adding 'business effective from' dates that are in the future?",
-    "supportingInformation": "When updating PDS, ‘business effective from’ dates must not be set in the future.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "derive addresses from an address lookup tool when updating PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDADD-1",
-    "question": "Does your product derive addresses from an address lookup tool when updating PDS?",
-    "supportingInformation": "Local systems must be capable of deriving addresses from an address lookup tool when performing updates. We prefer you to use a tool that uses Ordnance Survey AddressBase, such as the OS Places API. We also accept tools that use Royal Mail Postcode Address File (PAF).",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "support postcodes that conform to the Royal Mail postcode format",
-    "section": "",
-    "reference": "PDS-FHIR-UPDADD-5",
-    "question": "Does your product support postcodes that conform to the Royal Mail postcode format?",
-    "supportingInformation": "The postcode must conform to the Royal Mail postcode format e.g. a single space character must separate the ‘outcode’ and ‘incode’.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "support the manual population of addresses",
-    "section": "",
-    "reference": "PDS-FHIR-UPDADD-6",
-    "question": "Does your product support the manual population of addresses?",
-    "supportingInformation": "Where an address cannot be found in the address lookup tool or an address lookup tool is not supported, systems must enable the user to manually populate the address according to the prescribed format.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "support the default postcode for 'no fixed abode' addresses",
-    "section": "",
-    "reference": "PDS-FHIR-UPDADD-8.2.3",
-    "question": "Does your product support the default postcode for 'no fixed abode' addresses?",
-    "supportingInformation": "For ‘no fixed abode’ addresses, the postcode field must contain the default postcode ‘ZZ99 3VZ’.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable the updating of primary care information on the PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDGPS-1",
-    "question": "Does your product enable the updating of primary care information on the PDS?",
-    "supportingInformation": "Systems other than NHAIS, GP Practice and DSA must not update primary care information on the PDS.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable the removal of primary care information on the PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDGPS-1.1",
-    "question": "Does your product enable the removal of primary care information on the PDS?",
-    "supportingInformation": "Systems other than NHAIS or DSA must not ‘remove’ primary care information from the PDS.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable the updating of registered GP practice information on the PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDGPS-1.2",
-    "question": "Does your product enable the updating of registered GP practice information on the PDS?",
-    "supportingInformation": "Primary care systems must only update registered GP practice information as part of GP registration functionality. This information must not be changed on the PDS for any other purpose.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable free-text entry when updating primary care information on the PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDGPS-2",
-    "question": "Does your product enable free-text entry when updating primary care information on the PDS?",
-    "supportingInformation": "Where primary care data is added to the update request, the user interface must not allow free-text entry of coded data, but provide lookup functionality.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "record informal death status for death notifications when updating PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDDTH-1",
-    "question": "Does your product record informal death status for death notifications when updating PDS?",
-    "supportingInformation": "Where there is a legitimate business need to submit death notifications, local systems must be capable of recording (e.g. setting) informal death status on the PDS.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable removal of a previously set death status when updating PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDDTH-4",
-    "question": "Does your product enable removal of a previously set death status when updating PDS?",
-    "supportingInformation": "Local systems must not attempt to un-decease the patient on the PDS, by ‘removing’ a death status once set.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "enable changing death status when updating PDS",
-    "section": "",
-    "reference": "PDS-FHIR-UPDDTH-5",
-    "question": "Does your product enable changing death status when updating PDS?",
-    "supportingInformation": "Local systems must not update the death status recorded on PDS from a ‘2’ (formal) to a ‘1’ (informal).",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "support language definition where the interpreter required indicator is used",
-    "section": "",
-    "reference": "PDS-FHIR-UPDLAN-1",
-    "question": "Does your product support language definition where the interpreter required indicator is used?",
-    "supportingInformation": "If the interpreter required indicator is to be updated on PDS then a language defined in the language vocabulary must also be included in the update.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "only support pharmacy codes that are Spine-compliant",
-    "section": "",
-    "reference": "PDS-FHIR-UPDPHY-1",
-    "question": "Does your product only support pharmacy codes that are Spine-compliant?",
-    "supportingInformation": "Local systems must only update the PDS with codes that are for Spine-compliant pharmacies.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
-    "status": "Not Started"
-  },
-  {
-    "title": "reset the Version ID when required",
-    "section": "",
-    "reference": "PDS-FHIR-UPDFLR-2",
-    "question": "Does your product reset the Version ID when required?",
-    "supportingInformation": "If an update fails as a result of a Version ID failure, the Version ID must be reset to force a manual synchronisation at the next significant event.",
-    "currentResponse": "",
-    "responseOptions": [
-      "Yes",
-      "No",
-      "Out of scope"
-    ],
-    "functionalArea": "Patient Demographics & Updates",
+    "functionalArea": "Patient Search & Results Handling",
     "status": "Not Started"
   }
 ]

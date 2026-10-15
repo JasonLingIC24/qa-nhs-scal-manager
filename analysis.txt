@@ -1,0 +1,100 @@
+
+> qa-nhs-scal-manager@1.0.0 start
+> tsx src/main.ts
+
+NHS SCAL Manager
+
+Answered: 20
+Unanswered: 49
+
+{
+  YesNoSectionQuestionView: 6,
+  TextSectionQuestionView: 2,
+  SingleChoiceSectionQuestionView: 61
+}
+Extracted 69 requirements
+{
+  YesNoSectionQuestionView: 6,
+  TextSectionQuestionView: 2,
+  SingleChoiceSectionQuestionView: 61
+}
+PDS-FHIR-NALL
+                  01 YesNoSectionQuestionView false
+PDS-FHIR-NALL
+                  01.1 TextSectionQuestionView false
+PDS-FHIR-NALL
+                  02 YesNoSectionQuestionView false
+PDS-FHIR-NALL
+                  03 YesNoSectionQuestionView false
+PDS-FHIR-001 TextSectionQuestionView true
+PDS-FHIR-PDSPCP-4 SingleChoiceSectionQuestionView true
+PDS-FHIR-PDS-PCP-8 SingleChoiceSectionQuestionView false
+PDS-FHIR-PDSPCP-7 YesNoSectionQuestionView true
+PDS-FHIR-EUOODS -1 YesNoSectionQuestionView true
+PDS-FHIR-RTLMT-1 YesNoSectionQuestionView true
+PDS-FHIR-TRCDPY-2 SingleChoiceSectionQuestionView true
+PDS-FHIR-TRCDPY-2.1 SingleChoiceSectionQuestionView true
+PDS-FHIR-TRCDPY-4 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSEN-3 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSEN-3.1 SingleChoiceSectionQuestionView false
+PDS-FHIR-PDSPCP-3 SingleChoiceSectionQuestionView true
+PDS-FHIR-PDSPCP-3.1 SingleChoiceSectionQuestionView true
+PDS-FHIR-SNCSCN-5 SingleChoiceSectionQuestionView true
+PDS-FHIR-SNCSCN-5.1 SingleChoiceSectionQuestionView true
+PDS-FHIR-SNCSCN-6 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSUP-1 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSUP-2 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSUP-3 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGINV-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-FLGINV-2 SingleChoiceSectionQuestionView false
+PDS-FHIR-FLGSEN-1.1 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSEN-1.1.1 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSEN-1.1.2 SingleChoiceSectionQuestionView true
+PDS-FHIR-FLGSEN-6 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPCON-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-PDSPCP-6 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCGEN-4 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCCMP-5 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCSCN-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-TRCCNF-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCSCN-7 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCSCN-7.1 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCSCN-8 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCSPL-4.2 SingleChoiceSectionQuestionView false
+PDS-FHIR-SNCNAM-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-FLGSUP-2.2 SingleChoiceSectionQuestionView false
+PDS-FHIR-FLGINV-2.1 SingleChoiceSectionQuestionView false
+PDS-FHIR-FLGINV-2.1.1 SingleChoiceSectionQuestionView false
+PDS-FHIR-FLGSEN-4 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDGEN-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDGEN-7 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDSEM-5 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDSEM-6 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDSEM-7 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDVLD-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDVLD-1.1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDVLD-1.3 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDDTS-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDDTS-6 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDDTS-8 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDADD-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDADD-5 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDADD-6 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDADD-8.2.3 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDGPS-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDGPS-1.1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDGPS-1.2 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDGPS-2 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDDTH-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDDTH-4 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDDTH-5 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDLAN-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDPHY-1 SingleChoiceSectionQuestionView false
+PDS-FHIR-UPDFLR-2 SingleChoiceSectionQuestionView false
+Wrote: data/output/requirements.json
+
+Requirements: 69
+Uncategorised: 1
+Wrote: data/output/scal-requirements.xlsx
+Wrote: data/output/jira-subtasks.csv
+Wrote: data/output/jira-subtask-preview.md

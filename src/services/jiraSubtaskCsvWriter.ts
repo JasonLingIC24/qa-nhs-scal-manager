@@ -11,10 +11,12 @@ export class JiraSubtaskCsvWriter {
     );
 
     requirements.forEach((requirement) => {
+      const shortRef = requirement.reference.replace("PDS-FHIR-", "");
+
       rows.push(
         [
           this.escape("Sub-task"),
-          this.escape(`${requirement.reference} - ${requirement.title}`),
+          this.escape(`[${shortRef}] - ${requirement.title}`),
           this.escape(this.buildDescription(requirement)),
           this.escape("EVA-2583"),
           this.escape(`SCAL,PDS`),
@@ -34,55 +36,132 @@ export class JiraSubtaskCsvWriter {
   private buildDescription(requirement: ScalRequirement): string {
     const lines: string[] = [];
 
-    lines.push("SCAL Requirement");
+    const assessmentStatus = requirement.currentResponse?.trim()
+      ? "Response Present"
+      : "Response Required";
+
+    lines.push("h2. SCAL Requirement");
     lines.push("");
 
-    lines.push(`Reference: ${requirement.reference}`);
+    lines.push("||Field||Value||");
+    lines.push(`|SCAL Reference|${requirement.reference}|`);
+    lines.push(`|Title|${requirement.title}|`);
+    lines.push(`|Functional Area|${requirement.functionalArea ?? ""}|`);
+    lines.push(`|Assessment Status|${assessmentStatus}|`);
+
     lines.push("");
 
-    lines.push("Functional Area");
-    lines.push(requirement.functionalArea ?? "");
+    lines.push("h2. Existing SCAL Status");
     lines.push("");
 
-    lines.push("Question");
+    lines.push("||Field||Value||");
+    lines.push(`|Answered|${requirement.isAnswered ? "Yes" : "No"}|`);
+    lines.push(
+      `|Current Response|${
+        requirement.currentResponse?.trim() ? "Present" : "Not Supplied"
+      }|`,
+    );
+
+    lines.push("");
+
+    lines.push("h2. Question");
+    lines.push("");
     lines.push(requirement.question);
+
     lines.push("");
 
     if (requirement.supportingInformation) {
-      lines.push("Supporting Information");
+      lines.push("h2. Supporting Information");
+
+      lines.push("");
       lines.push(requirement.supportingInformation);
+
       lines.push("");
     }
 
-    lines.push("Available Responses");
+    lines.push("h2. Available Responses");
+
+    lines.push("");
 
     requirement.responseOptions.forEach((option) => {
-      lines.push(`- ${option}`);
+      lines.push(`* ${option}`);
     });
 
     lines.push("");
 
-    if (requirement.currentResponse) {
-      lines.push(`Current SCAL Response: ${requirement.currentResponse}`);
-      lines.push("");
+    lines.push("h2. Current SCAL Response");
+    lines.push("");
+
+    if (requirement.currentResponse && requirement.currentResponse.trim()) {
+      lines.push("{panel:bgColor=#E3FCEF}");
+      lines.push(requirement.currentResponse);
+      lines.push("{panel}");
+    } else {
+      lines.push("{panel:bgColor=#FFEBE6}");
+      lines.push("No response supplied");
+      lines.push("{panel}");
     }
 
-    lines.push("Response");
-    lines.push("[TBD]");
     lines.push("");
 
-    lines.push("Notes");
-    lines.push("[TBD]");
+    if (requirement.currentResponse && requirement.currentResponse.trim()) {
+      lines.push(`{panel:bgColor=#E3FCEF}`);
+      lines.push(requirement.currentResponse);
+      lines.push("{panel}");
+    } else {
+      lines.push("{panel:bgColor=#FFEBE6}");
+      lines.push("No response supplied");
+      lines.push("{panel}");
+    }
+
     lines.push("");
 
-    lines.push("QA Notes");
-    lines.push("[TBD]");
+    lines.push("h2. Response");
+
     lines.push("");
 
-    lines.push("Acceptance Criteria");
-    lines.push("- Requirement reviewed");
-    lines.push("- Response completed");
-    lines.push("- Returned to QA");
+    lines.push("Please provide:");
+
+    lines.push("");
+
+    lines.push("* Proposed SCAL response");
+    lines.push("* Explanation of current behaviour");
+    lines.push("* Any assumptions or limitations");
+
+    lines.push("");
+
+    lines.push("Response:");
+
+    lines.push("");
+
+    lines.push("{color:#FF5630}[TBD]{color}");
+
+    lines.push("");
+
+    lines.push("h2. Notes");
+
+    lines.push("");
+
+    lines.push("{color:#FF5630}[TBD]{color}");
+
+    lines.push("");
+
+    lines.push("h2. QA Notes");
+
+    lines.push("");
+
+    lines.push("{color:#FF5630}[TBD]{color}");
+
+    lines.push("");
+
+    lines.push("h2. Acceptance Criteria");
+
+    lines.push("");
+
+    lines.push("* Requirement reviewed");
+    lines.push("* Developer response provided");
+    lines.push("* Returned to QA");
+    lines.push("* Ready for SCAL submission review");
 
     return lines.join("\n");
   }
